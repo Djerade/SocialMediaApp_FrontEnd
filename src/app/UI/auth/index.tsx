@@ -1,3 +1,4 @@
+import Bouton from '@/app/components/Bouton'
 import LogoName from '@/app/components/logoName/logoName'
 import { Button, Text, Box, Flex, FormControl, Input, Divider, AbsoluteCenter } from '@chakra-ui/react'
 import { NextPage } from 'next'
@@ -25,15 +26,7 @@ const Login: NextPage<Props> = ({}) => {
                         ou
                     </AbsoluteCenter>
                 </Box>
-                <Button
-                    type='submit'
-                    mt={4}
-                    w={'100%'}
-                    color={'white'}
-                    bg={'blue'}
-                >
-                    Se connecter
-                </Button>
+                <Bouton bgBtn={'blue'} typeBtn={'submit'} colorBtn={'white'} Shadow={'sm'} textBtn={'Se connecter'} largeur={'100%'}/>
             </Flex>
             <Flex boxShadow={'base'} p={8} align={'center'} mt={10} flexDirection={'row'} w={{ base: '90%', sm: '60%', md: "40%", lg: "30%" }}>
                 <Text variant=''>Vous avez pas de compte ? </Text>
