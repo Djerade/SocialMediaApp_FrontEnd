@@ -11,8 +11,7 @@ interface Props {}
 const Login: NextPage<Props> = ({ }) => {
      const router = useRouter();
     function dashboard() {
-        router.push('../Dashboard/');
-        
+        router.push('/Dashboard');
     }
     
     return <Flex align={'center'} justify={'center'} w={{ base: "", sm: "", md: "", lg: "" }}>
