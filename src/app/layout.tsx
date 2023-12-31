@@ -1,6 +1,9 @@
 // app/layout.tsx
+import { Box, Flex } from '@chakra-ui/react'
+import Sidebar from './components/sidebare'
 import { fonts } from './fonts'
 import { Providers } from './providers'
+import NaveBar from './components/navebar'
 
 export default function RootLayout({
   children,
@@ -10,7 +13,17 @@ export default function RootLayout({
   return (
     <html lang='en' className={fonts.rubik.variable}>
       <body>
-        <Providers>{children}</Providers>
+        <Providers>
+          <Flex w={'100%'} flexDirection={"row"}>
+            <Sidebar />
+            <Flex width={'100%'} flexDirection={'column'}>
+              <NaveBar/> 
+              <Box>
+                {children}
+              </Box>
+            </Flex>
+          </Flex>
+        </Providers>
       </body>
     </html>
   )
