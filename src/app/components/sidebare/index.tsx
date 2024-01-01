@@ -6,6 +6,7 @@ const Sidebar = () => {
     return <Flex
         w='250px'
         h='100vh'
+        display={{ base:"none", sm:"block" }}
         p={2}
         bg='white.100'
         boxShadow={"lg"}>
