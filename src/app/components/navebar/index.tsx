@@ -8,7 +8,7 @@ import { RiNotification4Line } from "react-icons/ri";
 import LogoName from "../logoName/logoName";
 
 const NaveBar = () => {
-    return <Flex justify={'space-between'} align={'center'} p={3} boxShadow={'lg'}  h={'70px'} w={"100%"}>
+    return <Flex justify={{ base: "center", sm:'space-between'}} align={'center'} p={3} boxShadow={'lg'}  h={'70px'} w={"100%"}>
         <Flex align={'center'} display={{ base:"none", sm:"block"}} justify={'space-between'} w={"55%"}>
           <Input alignSelf={'center'} mr={2} w={'50%'} placeholder='Search' borderRadius={15} />
           <Button  leftIcon={<IoAddSharp/>} color={'white'} borderRadius={'30px'} bgGradient='linear(to-l, #7928CA, #FF0080)'  >
@@ -20,13 +20,13 @@ const NaveBar = () => {
           <IconButton mr={5} boxShadow={'sm'} borderRadius={'30px'} bg={'white'} _hover={{ bg: "gray" }} color={'gray'} icon={<RiNotification4Line/>} aria-label={''} />
           <IconButton mr={5} boxShadow={'sm'}  borderRadius={'30px'}  bg={'white'}  _hover={{ bg: "gray" }} color={'gray'} icon={<IoMenuSharp />} aria-label={''} />
         </Flex>
-      <Flex display={{ base: 'block', sm:"none"}} w={"100%"} justify={"space-between"}>
-         <IconButton mr={5} boxShadow={'sm'} borderRadius={'30px'} bg={'white'} _hover={{ bg: "gray" }} color={'gray'} icon={<AiOutlineCamera />} aria-label={''} />
-         <Flex ml={2} align={'center'} h={'50px'} w={"90px"}>
-            <LogoName />
-         </Flex>
-         <IconButton mr={5} boxShadow={'sm'} borderRadius={'30px'} bg={'white'} _hover={{ bg: "gray" }} color={'gray'} icon={<GrSend />} aria-label={''} />
-      </Flex>
+        <Flex flexDirection={'row'} bg={'red'} alignItems={'center'} display={{ base: 'block', sm:"none"}} w={"100%"} justify={"center"}>
+           <IconButton mr={5} boxShadow={'sm'} borderRadius={'30px'} bg={'white'} _hover={{ bg: "gray" }} color={'gray'} icon={<AiOutlineCamera />} aria-label={''} /> 
+           <Flex justify={'center'} ml={2} align={'center'} h={'50px'} w={"90px"}>
+              <LogoName />
+           </Flex>
+           <IconButton mr={5} boxShadow={'sm'} borderRadius={'30px'} bg={'white'} _hover={{ bg: "gray" }} color={'gray'} icon={<GrSend />} aria-label={''} />
+        </Flex>
       </Flex>
 }
 export default NaveBar;
