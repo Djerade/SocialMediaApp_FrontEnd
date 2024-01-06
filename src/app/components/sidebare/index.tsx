@@ -1,5 +1,6 @@
-import { Flex } from "@chakra-ui/react"
+import { Center, Flex, Text } from "@chakra-ui/react"
 import LogoImage from "../logoName/logo"
+import Profile from "../profile/index"
 import LogoName from "../logoName/logoName"
 
 const Sidebar = () => {
@@ -14,8 +15,20 @@ const Sidebar = () => {
           <LogoImage />
           <Flex ml={2} align={'center'} h={'50px'} w={"90px"}>
             <LogoName />
-          </Flex>
+         </Flex>
+      </Flex>
+      
+      <Center flexDirection={'column'} mt={8}>
+        <Profile />
+        <Flex mt={'2'} justify={'center'} align={'center'} flexDirection={"column"}>
+          <Text fontFamily={"Segoe UI"} fontSize={"lg"} fontWeight={'bold'} color={'black'} >
+            Vera Cherry
+          </Text>
+          <Text fontFamily={"Segoe UI"} fontSize={'xs'} fontWeight={'normal'} color={'gray'} >
+            Vera Cherry
+          </Text>
         </Flex>
-        </Flex>
+      </Center>
+  </Flex>
 }
 export default Sidebar
