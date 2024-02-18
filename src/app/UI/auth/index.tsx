@@ -1,7 +1,7 @@
 import Bouton from '@/app/components/Bouton'
 import { useRouter } from 'next/navigation';
 import InputForm from '@/app/components/Inpute'
-import LogoName from '@/app/components/logoName/logoName'
+import LogoName from '@/app/components/logoName/LogoName+'
 import { Button, Text, Box, Flex, FormControl, Input, Divider, AbsoluteCenter } from '@chakra-ui/react'
 import { NextPage } from 'next'
 

@@ -5,7 +5,7 @@ import { IoAddSharp, IoMenuSharp } from "react-icons/io5";
 import { RiNotification4Line } from "react-icons/ri";
 
 //Import
-import LogoName from "../logoName/logoName";
+import LogoName from "../logoName/LogoName+";
 
 const NaveBar = () => {
     return <Flex justify={{ base: "center", sm:'space-between'}} align={'center'} p={3} boxShadow={'lg'}  h={'70px'} w={"100%"}>

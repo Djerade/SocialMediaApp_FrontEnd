@@ -1,8 +1,8 @@
 'use client'
 import { Box, Center, Flex, Text } from "@chakra-ui/react"
-import LogoImage from "../logoName/logo"
 import Profile from "../profile/index"
-import LogoName from "../logoName/logoName"
+import LogoName from "../logoName/LogoName+"
+import LogoImage from "../logoName/Logo";
 
 interface Item {
   name: String;
