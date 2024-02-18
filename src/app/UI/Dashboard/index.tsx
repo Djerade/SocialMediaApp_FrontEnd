@@ -4,12 +4,12 @@ import { NextPage } from 'next'
 // Import
 import Story from '@/app/components/Story'
 
-interface Props {}
+interface Props { }
 
 const Index: NextPage<Props> = ({}) => {
-  return <Box>
+  return <div>
       <Story/>
-  </Box>
+  </div>
 }
 
 export default Index
