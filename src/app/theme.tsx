@@ -8,12 +8,20 @@ export const theme = extendTheme({
       dark: "#003100",
       light: "#e6f6e6",
     },
-    secondary: "#009400",
+    secondary: "#CDCDCD",
+    background: {
+        dark: "#111111",
+        light: "#F4F4F4"
+            
+    },
     text: {
-      dark: "#000",
-      light: "#fff"
+      dark: "#FFFFFF",
+      light: "#000000"
      },
-    icon: '#ffd700',
+    icon: {
+      dark: "#FFFFFF",
+      light: "#000000"
+    },
 
   },
 });
