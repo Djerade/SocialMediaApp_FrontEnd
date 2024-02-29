@@ -7,7 +7,7 @@ const LogoName = () => {
     return <Box>
         <Image
           src={logoNameImage}
-          width={200}
+          width={150}
           height={200}
           alt="logo name"
         />
