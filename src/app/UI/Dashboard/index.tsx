@@ -11,13 +11,8 @@ interface Props { }
 const Index: NextPage<Props> = ({ }) => {
   const { colorMode, toggleColorMode } = useColorMode();
   return <div>
-    <Story />
-    <Text>
-      salut
-    </Text>
-     <Button my={4} onClick={toggleColorMode}>
-          {colorMode === "light" ? "Dark mode": "Light mode"}
-        </Button>
+    {/* <Story /> */}
+
   </div>
 }
 
