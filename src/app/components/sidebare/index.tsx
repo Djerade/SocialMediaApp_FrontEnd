@@ -1,5 +1,5 @@
 'use client'
-import { Box, Button, Center, Flex, IconButton, Text } from "@chakra-ui/react"
+import { Box, Button, Center, Flex, Icon, IconButton, Text } from "@chakra-ui/react"
 import Profile from "../profile/index"
 import LogoName from "../logoName/LogoName+"
 import LogoImage from "../logoName/logo";
@@ -12,7 +12,7 @@ interface Item {
   value: String;
 }
 const Sidebar = () => {
-  const items = [
+  const listMenu = [
     {
       "name": "Poste",
       "value": "5842",
@@ -26,16 +26,25 @@ const Sidebar = () => {
       "value": "5842",
     }
   ];
-    const { colorMode, toggleColorMode } = useColorMode();
+  const { colorMode, toggleColorMode } = useColorMode();
 
  return <Flex w='250px' h='100vh' display={{ base:"none", sm:"block" }} p={2} bg='white.100' boxShadow={"lg"}>
-       <Flex flexDirection={'row'} align={'center'} width={"100%"} h={'50px'} justify={'center'} >
-         <Flex m={2} align={'center'} h={'50px'} w={"90px"}>
-            <LogoName />
-         </Flex>
-        </Flex>
-      <Center flexDirection={'column'} mt={8}>
-        
+   <Flex flexDirection={'row'} align={'center'} width={"100%"} h={'50px'} justify={'center'} >
+     <Flex m={2} pt={3} align={'center'} h={'50px'} w={"90px"}>
+        <LogoName />
+     </Flex>
+   </Flex>
+   <Center pt={10} flexDirection={'column'} mt={8}>
+     {
+       listMenu.map((item) => (
+         <Button justifyContent={"flex-start"} bg={'white'} _hover={{ bg: 'red' }} mb={5} w={'100%'} aria-label={"Qccueil"} >
+           <CiDark/>
+           <Text variant=''>
+             {item.name}
+           </Text>
+         </Button>
+       ) ) 
+     }
    </Center>
     <IconButton position={"fixed"} bottom={0} icon={colorMode === "light" ? <CiDark /> : <CiLight /> } my={4} onClick={toggleColorMode} aria-label={""}>
           {colorMode === "light" ? "Dark mode": "Light mode"}
