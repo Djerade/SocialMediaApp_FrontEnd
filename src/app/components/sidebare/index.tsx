@@ -4,8 +4,16 @@ import Profile from "../profile/index"
 import LogoName from "../logoName/LogoName+"
 import LogoImage from "../logoName/logo";
 import { useColorMode } from '@chakra-ui/react';
+//
+import { HiMiniHome } from "react-icons/hi2";
 import { CiLight } from "react-icons/ci";
 import { CiDark } from "react-icons/ci";
+import { IoSearchSharp } from "react-icons/io5";
+import { FaRegCompass } from "react-icons/fa";
+import { RiMovieLine } from "react-icons/ri";
+import { BiMessageRounded } from "react-icons/bi";
+import { CiHeart } from "react-icons/ci";
+import { FaRegPlusSquare } from "react-icons/fa";
 
 interface Item {
   name: String;
@@ -16,14 +24,42 @@ const Sidebar = () => {
     {
       "name": "Poste",
       "value": "5842",
+      "icon": HiMiniHome
     },
     {
       "name": "Followings",
       "value": "5842",
+      "icon": IoSearchSharp
     },
     {
-      "name": "Followers",
+      "name": "Découvrir",
       "value": "5842",
+      "icon": FaRegCompass 
+    },
+        {
+      "name": "Réels",
+      "value": "5842",
+      "icon": RiMovieLine 
+    },
+    {
+      "name": "Messages",
+      "value": "5842",
+      "icon": BiMessageRounded
+    },
+    {
+      "name": "Notifications",
+      "value": "5842",
+      "icon": CiHeart 
+    },
+    {
+      "name": "Créer  ",
+      "value": "5842",
+      "icon": FaRegPlusSquare
+    },
+    {
+      "name": "profil",
+      "value": "5842",
+      "icon": FaRegCompass 
     }
   ];
   const { colorMode, toggleColorMode } = useColorMode();
@@ -37,8 +73,8 @@ const Sidebar = () => {
    <Center pt={10} flexDirection={'column'} mt={8}>
      {
        listMenu.map((item) => (
-         <Button justifyContent={"flex-start"} bg={'white'} _hover={{ bg: 'red' }} mb={5} w={'100%'} aria-label={"Qccueil"} >
-           <CiDark/>
+         <Button  justifyContent={"flex-start"} bg={'white'} _hover={{ bg: 'gray.200' }} mb={2} w={'90%'} aria-label={""} >
+           <Icon w={6} h={6} as={item.icon} me={4} />
            <Text variant=''>
              {item.name}
            </Text>
