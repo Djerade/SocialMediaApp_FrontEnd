@@ -1,10 +1,13 @@
-import { Flex } from "@chakra-ui/react"
+import { Flex, HStack, Text } from "@chakra-ui/react"
 
-const section_profile = () => {
-    return <div>
-        <Flex w={'100%'}>
-            
-        </Flex>
-    </div>
+const Storie = () => {
+    return <>
+        <HStack p={7} spacing={5}>
+            <Text variant=''>
+                sction
+            </Text>
+        </HStack>
+    </>
 }
-export default section_profile;
+
+export default Storie;

@@ -4,8 +4,8 @@ import { NextPage } from 'next'
 
 // Import
 import Story from '@/app/components/Story'
-import section_profile from '@/app/components/section_profile'
 import posts from '@/app/components/posts'
+import Storie from '@/app/components/section_profile';
 
 
 interface Props { }
@@ -15,6 +15,7 @@ const Index: NextPage<Props> = ({ }) => {
   return <div>
     <Flex flexDirection={"row"}>
       <Story />
+      <Storie/>
     </Flex>
   </div>
 }

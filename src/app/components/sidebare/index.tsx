@@ -67,7 +67,7 @@ const Sidebar = () => {
  return <Flex w='250px' h='100vh' display={{ base:"none", sm:"block" }} p={2} bg='white.100' boxShadow={"lg"}>
    <Flex flexDirection={'row'} align={'center'} width={"100%"} h={'50px'} justify={'center'} >
      <Flex m={2} pt={3} align={'center'} h={'50px'} w={"90px"}>
-        <LogoName />
+        <LogoName />  
      </Flex>
    </Flex>
    <Center pt={10} flexDirection={'column'} mt={8}>
