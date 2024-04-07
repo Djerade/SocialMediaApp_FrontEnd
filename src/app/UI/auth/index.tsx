@@ -9,7 +9,7 @@ import { useMutation } from '@apollo/client';
 import { error } from 'console';
 import { gql } from "@apollo/client";
 import { useState } from 'react';
-import LOGIN from '@/app/GraphQl/Mutations/login';
+// import LOGIN from '@/app/GraphQl/Mutations/login';
 
 
 interface Props {}
@@ -21,8 +21,19 @@ const Login: NextPage<Props> = ({ }) => {
         password: "",
     });
 
+//   const handleChange = (event: any) => {
+//     setvalue({
+//       ...value,
+//       [event.target.name]: event.target.value
+//     })
+//   }
+
+    const handleChange = (event: any) => {
+        console.log('salut');
+        
+    }
     // const [create, { data, loading, error }] = useMutation(
-    //     LOGIN,
+      
     //     {
     //         variables:{
     //         username: value.username,
@@ -53,8 +64,12 @@ const Login: NextPage<Props> = ({ }) => {
         <Flex align={'center'} w={"100%"} flexDirection={'column'}>
             <Flex boxShadow={'base'} p={8} align={'center'} mt={10} flexDirection={'column'} w={{ base: '90%', sm: '60%', md: "40%", lg: "30%" }}>
                 <LogoName />
-                <InputForm placeholderInput={"Nom d'utilisateur"}/>
-                <InputForm placeholderInput={"Mot de passe"}/>
+                <InputForm   placeholderInput={"Nom d'utilisateur"} handleChange={ (): void {
+                    throw new Error('Function not implemented.');
+                } }/>
+                <InputForm  placeholderInput={"Mot de passe"} handleChange={function (): void {
+                    throw new Error('Function not implemented.');
+                } }/>
                 <Button  bg={'blue'} mt={4} type={"submit"} w={'100%'} color={'white'} boxShadow={'sm'} >
                     Se connecter
                 </Button>

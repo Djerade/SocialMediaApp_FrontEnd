@@ -32,13 +32,22 @@ export default function RootLayout({
   children: React.ReactNode,
   }) {
   
+  // const { colorMode } = useColorMode();
   return (
     <html lang='en' className={fonts.rubik.variable}>
       <body>
         <ColorModeScript initialColorMode={theme.initialColorMode} />
         <ApolloProvider client={client}>
           <Providers>
-              {children}
+              <Flex  w={'100%'} flexDirection={"row"}>
+                <Sidebar />
+                <Flex width={'100%'} flexDirection={'column'}>
+                  <NaveBar/> 
+                  <Box>
+                    {children}
+                  </Box>
+                </Flex>
+              </Flex>
             </Providers>
           </ApolloProvider>
       </body>

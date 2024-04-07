@@ -6,7 +6,7 @@ import Index from './UI/Dashboard'
 export default function Home() {
   return (
     <div>
-      <Index/>
+      <Login/>
     </div>
   )
 }
