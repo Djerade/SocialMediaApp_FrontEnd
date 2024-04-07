@@ -33,7 +33,7 @@ const Index: NextPage<Props> = ({ }) => {
   
   
   const { data, loading, error } = useQuery(POST, { onCompleted(data) {
-      console.log(data);
+      console.log('-->',data);
   }, onError(error) {
       console.error(error);
       
