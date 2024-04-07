@@ -1,15 +1,50 @@
+'use client'
 import Bouton from '@/app/components/Bouton'
 import { useRouter } from 'next/navigation';
 import InputForm from '@/app/components/Inpute'
 import LogoName from '@/app/components/logoName/LogoName+'
 import { Button, Text, Box, Flex, FormControl, Input, Divider, AbsoluteCenter } from '@chakra-ui/react'
 import { NextPage } from 'next'
+import { useMutation } from '@apollo/client';
+import { error } from 'console';
+import { gql } from "@apollo/client";
+import { useState } from 'react';
+import LOGIN from '@/app/GraphQl/Mutations/login';
 
 
 interface Props {}
 
 const Login: NextPage<Props> = ({ }) => {
-     const router = useRouter();
+    const router = useRouter();
+    const [value, setvalue] = useState({
+        username: "",
+        password: "",
+    });
+
+    // const [create, { data, loading, error }] = useMutation(
+    //     LOGIN,
+    //     {
+    //         variables:{
+    //         username: value.username,
+    //         password: value.password
+    //         }, onCompleted(data) {
+    //             console.log('data--------',data);
+    //         }, onError(error) {
+    //              console.log(error.message);
+    //         }
+    //     }
+    // );
+
+
+
+
+
+    // const handleSubmit = () => {
+    //     create()
+    // }
+    
+
+
     function dashboard() {
         router.push('/Dashboard');
     }
@@ -20,7 +55,7 @@ const Login: NextPage<Props> = ({ }) => {
                 <LogoName />
                 <InputForm placeholderInput={"Nom d'utilisateur"}/>
                 <InputForm placeholderInput={"Mot de passe"}/>
-                <Button onClick={dashboard} bg={'blue'} mt={4} type={"submit"} w={'100%'} color={'white'} boxShadow={'sm'} >
+                <Button  bg={'blue'} mt={4} type={"submit"} w={'100%'} color={'white'} boxShadow={'sm'} >
                     Se connecter
                 </Button>
                 <Box position={'relative'} p={10}>
@@ -34,7 +69,7 @@ const Login: NextPage<Props> = ({ }) => {
                 </Flex>
             </Flex>
             <Flex boxShadow={'base'} p={8} align={'center'} mt={10} flexDirection={'row'} w={{ base: '90%', sm: '60%', md: "40%", lg: "30%" }}>
-                <Text variant=''>Vous avez pas de compte ? </Text>
+                <Text variant=''>Vous avez pas de compte ? </Text>     
                 <Text color={'blue'} variant=''>Inscrivez vous </Text>
             </Flex>
         </Flex>
