@@ -1,16 +1,22 @@
 import { FormControl, Input } from "@chakra-ui/react"
+import { useState } from "react";
 
 
 const InputForm = (props: {
     placeholderInput: String;
-    handleChange(): void;
-
+    valueContent: String;
+    typeContent: String;
+    nameContent: String;
+    idContent: String;
+  
 }) => {
    
-    const { placeholderInput, handleChange } = props;
+    const [value, setvalue] = useState<string>();
+    const { placeholderInput,  idContent, valueContent, typeContent, nameContent } = props;
+    // onchange(value)
     return <FormControl mt={4}>
-                <Input id="username" name="username" onClick={handleChange} placeholder={placeholderInput.toString()} />
-           </FormControl>
+        <Input  id={idContent.toString()} type={typeContent.toString()} value={valueContent.toString()} name={nameContent.toString()} placeholder={placeholderInput.toString()} />
+        </FormControl>
 }
 
 export default InputForm;
