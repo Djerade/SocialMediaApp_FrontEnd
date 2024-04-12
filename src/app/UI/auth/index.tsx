@@ -15,15 +15,45 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 // import LOGIN from '@/app/GraphQl/Mutations/login';
 
-
-interface Props {}
-
-  const infosUserSchema = Yup.object({
+const infosUserSchema = Yup.object({
     username: Yup.string().required('please your username').min(3, 'Please  3 charaters'),
     password: Yup.string().required('please your password').min(3, 'Please  3 charaters')
   })
 
 function Login() {
+  const [username, setusername] = useState('');
+  const [password, setpassword] = useState('');
+  const LOGIN = gql`
+  mutation Login {
+    login(
+      username: username, 
+      password: password) {
+        username
+        password
+        email
+        createdAt
+        token
+    }
+}
+  `
+  const [handleLogin, { data, loading, error }] = useMutation(LOGIN, {
+    variables: {
+      username: username,
+      password: password
+    }
+  });
+  function handl(value: any) {
+    setusername(value.username);
+    setpassword(value.password);
+    console.log(value);
+    
+  }
+  if (loading) {
+    return 'Loading...';
+  }
+  if (error) {
+    console.log(error.message);
+  }
   return (
     <Formik 
       initialValues={{ 
@@ -32,9 +62,8 @@ function Login() {
       }}
       validationSchema={infosUserSchema}
       onSubmit={(value) => {
-        console.log("---------");
-        
-        console.log(value);
+        handl(value)
+        // console.log(value);
       }}
     >
     {
