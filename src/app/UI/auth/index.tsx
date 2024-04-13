@@ -4,7 +4,6 @@ import { useMutation } from '@apollo/client';
 import { useState } from 'react';
 import * as Yup from 'yup';
 import { Field, Form, Formik } from 'formik';
-
 import {
   Button,
   Text,
@@ -20,7 +19,6 @@ import { useRouter } from 'next/navigation';
 // Imports
 import LogoName from '@/app/components/logoName/LogoName+';
 import LOGIN from '@/app/GraphQl/Mutations/login';
-import Index from '../Dashboard/page';
 
 const infosUserSchema = Yup.object({
   username: Yup.string()
@@ -38,28 +36,39 @@ function Login() {
     password: '',
   });
 
-  const [handleLogin, { data, loading, error }] = useMutation(LOGIN, {
-    variables: {
-      username: value.username,
-      password: value.password,
+  const storageDate = (data: any) => {
+    data = JSON.stringify(data);
+    // console.log(String(data));
+  };
+  const [handleLogin, { loading }] = useMutation(LOGIN, {
+    context: {
+      Headers: {
+        'x-api-key': 'fd',
+      },
     },
-    onCompleted(data, clientOptions) {
-      console.log('---', data);
-      // router.push('/UI/Dashboard');
+    variables: {
+      username: value?.username.trim(),
+      password: value?.password.trim(),
+    },
+    onCompleted(data) {
+      storageDate(data?.login);
+      console.log(data.login.email);
+
+      // if (typeof window != 'undefined') {
+      //   window.location.reload();
+      // }
+      router.push('/UI/Dashboard');
+    },
+    onError(error) {
+      console.log('error', error);
     },
   });
-  function handl(value: any) {
+  function Submit(value: any) {
     setvalue(value);
     handleLogin();
   }
   if (loading) {
     return 'Loading...';
-  }
-  if (error) {
-    console.log('erreur:', error.message);
-  }
-  if (data) {
-    router.push('/UI/Dashboard');
   }
 
   return (
@@ -70,8 +79,7 @@ function Login() {
       }}
       validationSchema={infosUserSchema}
       onSubmit={(value) => {
-        handl(value);
-        // console.log(value);
+        Submit(value);
       }}
     >
       {(props) => (
