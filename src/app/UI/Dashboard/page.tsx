@@ -1,3 +1,4 @@
+'use client';
 import { useColorMode } from '@chakra-ui/react';
 import {
   Avatar,
@@ -36,14 +37,14 @@ const Index: NextPage<Props> = ({}) => {
     }
   `;
 
-  const { data, loading, error } = useQuery(POST, {
-    onCompleted(data) {
-      console.log('-->', data);
-    },
-    onError(error) {
-      console.error(error);
-    },
-  });
+  // const { data, loading, error } = useQuery(POST, {
+  //   onCompleted(data) {
+  //     console.log('-->', data);
+  //   },
+  //   onError(error) {
+  //     console.error(error);
+  //   },
+  // });
 
   const { colorMode, toggleColorMode } = useColorMode();
   return (
