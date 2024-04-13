@@ -19,6 +19,7 @@ import { useRouter } from 'next/navigation';
 // Imports
 import LogoName from '@/app/components/logoName/LogoName+';
 import LOGIN from '@/app/GraphQl/Mutations/login';
+import LogoFacebook from '@/app/components/logoName/logoFb';
 
 const infosUserSchema = Yup.object({
   username: Yup.string()
@@ -53,10 +54,6 @@ function Login() {
     onCompleted(data) {
       storageDate(data?.login);
       console.log(data.login.email);
-
-      // if (typeof window != 'undefined') {
-      //   window.location.reload();
-      // }
       router.push('/UI/Dashboard');
     },
     onError(error) {
@@ -102,7 +99,7 @@ function Login() {
                 <Field name="username" validate>
                   {({ field, form }: any) => (
                     <FormControl
-                      mt={4}
+                      mt={8}
                       isInvalid={form.errors.name && form.touched.name}
                     >
                       <Input {...field} placeholder="username" />
@@ -126,23 +123,27 @@ function Login() {
                   )}
                 </Field>
                 <Button
-                  bg={'blue'}
+                  bg={'blue.500'}
                   mt={4}
                   type={'submit'}
                   w={'100%'}
+                  borderRadius={'10px'}
                   color={'white'}
                   boxShadow={'sm'}
                 >
                   Se connecter
                 </Button>
-                <Box position={'relative'} p={10}>
+                <Box position={'relative'} p={4}>
                   <Divider />
-                  <AbsoluteCenter bg={'white'} px={4}>
+                  <AbsoluteCenter bg={'white'} px={10}>
                     ou
                   </AbsoluteCenter>
                 </Box>
-                <Flex>
-                  <Text variant="">Se Connecter avec Facebook</Text>
+                <Flex alignItems={'center'} flexDirection={'row'}>
+                  <LogoFacebook />
+                  <Text ml={3} variant="">
+                    Se Connecter avec Facebook
+                  </Text>
                 </Flex>
               </Flex>
               <Flex
