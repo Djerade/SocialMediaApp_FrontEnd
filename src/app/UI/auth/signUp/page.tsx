@@ -1,81 +1,65 @@
 'use client';
-// Modules
+import SIGNUP from '@/app/GraphQl/Mutations/signUp';
+import LogoName from '@/app/components/logoName/LogoName+';
+import LogoFacebook from '@/app/components/logoName/logoFb';
 import { useMutation } from '@apollo/client';
-import { useState } from 'react';
-import * as Yup from 'yup';
-import { Field, Form, Formik } from 'formik';
 import {
-  Button,
-  Text,
-  Box,
   Flex,
   FormControl,
   Input,
-  Divider,
-  AbsoluteCenter,
   FormErrorMessage,
+  Button,
+  Text,
+  Divider,
+  Box,
+  AbsoluteCenter,
 } from '@chakra-ui/react';
-import Link from 'next/link';
 import { useRouter } from 'next/navigation';
-// Imports
-import LogoName from '@/app/components/logoName/LogoName+';
-import LOGIN from '@/app/GraphQl/Mutations/login';
-import LogoFacebook from '@/app/components/logoName/logoFb';
+import { Formik, Form, Field } from 'formik';
+import { NextPage } from 'next';
+import Link from 'next/link';
+import { useState } from 'react';
 
-const infosUserSchema = Yup.object({
-  username: Yup.string()
-    .required('please your username')
-    .min(3, 'Please  3 charaters'),
-  password: Yup.string()
-    .required('please your password')
-    .min(3, 'Please  3 charaters'),
-});
+interface Props {}
 
-function Login() {
+const SignUp: NextPage<Props> = ({}) => {
   const router = useRouter();
   const [value, setvalue] = useState({
     username: '',
+    email: '',
+    confirmation: '',
     password: '',
   });
-
-  const storageDate = (data: any) => {
-    data = JSON.stringify(data);
-    // console.log(String(data));
-  };
-  const [handleLogin, { loading }] = useMutation(LOGIN, {
-    context: {
-      Headers: {
-        'x-api-key': 'fd',
-      },
-    },
+  const [handleSignUp, { data, loading, error }] = useMutation(SIGNUP, {
     variables: {
       username: value?.username.trim(),
+      email: value?.email.trim(),
       password: value?.password.trim(),
+      confirmation: value?.confirmation.trim(),
     },
     onCompleted(data) {
-      storageDate(data?.login);
-      console.log(data.login.email);
+      console.log(data);
       router.push('/UI/Dashboard');
     },
     onError(error) {
-      console.log('error', error);
+      console.log(error);
     },
   });
-  function Submit(value: any) {
-    setvalue(value);
-    handleLogin();
-  }
   if (loading) {
     return 'Loading...';
   }
-
+  const Submit = (value: any) => {
+    setvalue(value);
+    handleSignUp();
+  };
   return (
     <Formik
       initialValues={{
         username: '',
+        email: '',
+        confirmation: '',
         password: '',
       }}
-      validationSchema={infosUserSchema}
       onSubmit={(value) => {
         Submit(value);
       }}
@@ -92,11 +76,31 @@ function Login() {
                 boxShadow={'base'}
                 p={8}
                 align={'center'}
-                mt={10}
+                mt={5}
                 flexDirection={'column'}
                 w={{ base: '90%', sm: '60%', md: '40%', lg: '30%' }}
               >
                 <LogoName />
+                <Text margin={5} variant="">
+                  Inscrivez-vous pour voir les photos et vidéos de vos amis
+                </Text>
+                <Button
+                  bg={'blue.500'}
+                  mt={4}
+                  type={'submit'}
+                  w={'100%'}
+                  borderRadius={'10px'}
+                  color={'white'}
+                  boxShadow={'sm'}
+                >
+                  Se connecter avec Facebook
+                </Button>
+                <Box position={'relative'} p={4}>
+                  <Divider />
+                  <AbsoluteCenter bg={'white'} px={10}>
+                    ou
+                  </AbsoluteCenter>
+                </Box>
                 <Field name="username" validate>
                   {({ field, form }: any) => (
                     <FormControl
@@ -104,6 +108,17 @@ function Login() {
                       isInvalid={form.errors.name && form.touched.name}
                     >
                       <Input {...field} placeholder="username" />
+                      <FormErrorMessage>{form.errors.name}</FormErrorMessage>
+                    </FormControl>
+                  )}
+                </Field>
+                <Field name="email" validate>
+                  {({ field, form }: any) => (
+                    <FormControl
+                      mt={8}
+                      isInvalid={form.errors.name && form.touched.name}
+                    >
+                      <Input {...field} placeholder="email" />
                       <FormErrorMessage>{form.errors.name}</FormErrorMessage>
                     </FormControl>
                   )}
@@ -123,6 +138,21 @@ function Login() {
                     </FormControl>
                   )}
                 </Field>
+                <Field name="confirmation" validate>
+                  {({ field, form }: any) => (
+                    <FormControl
+                      mt={4}
+                      isInvalid={form.errors.name && form.touched.name}
+                    >
+                      <Input
+                        type="password"
+                        {...field}
+                        placeholder="confirmation"
+                      />
+                      <FormErrorMessage>{form.errors.name}</FormErrorMessage>
+                    </FormControl>
+                  )}
+                </Field>
                 <Button
                   bg={'blue.500'}
                   mt={4}
@@ -132,20 +162,8 @@ function Login() {
                   color={'white'}
                   boxShadow={'sm'}
                 >
-                  Se connecter
+                  S'inscrire
                 </Button>
-                <Box position={'relative'} p={4}>
-                  <Divider />
-                  <AbsoluteCenter bg={'white'} px={10}>
-                    ou
-                  </AbsoluteCenter>
-                </Box>
-                <Flex alignItems={'center'} flexDirection={'row'}>
-                  <LogoFacebook />
-                  <Text ml={3} variant="">
-                    Se Connecter avec Facebook
-                  </Text>
-                </Flex>
               </Flex>
               <Flex
                 boxShadow={'base'}
@@ -168,6 +186,6 @@ function Login() {
       )}
     </Formik>
   );
-}
+};
 
-export default Login;
+export default SignUp;
