@@ -1,7 +1,7 @@
 'use client';
 // Modules
 import { useMutation } from '@apollo/client';
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import * as Yup from 'yup';
 import { Field, Form, Formik } from 'formik';
 import {
@@ -21,6 +21,7 @@ import { useRouter } from 'next/navigation';
 import LogoName from '@/app/components/logoName/LogoName+';
 import LOGIN from '@/app/GraphQl/Mutations/login';
 import LogoFacebook from '@/app/components/logoName/logoFb';
+import { AuthProvider } from '@/app/Context/authContext';
 
 const infosUserSchema = Yup.object({
   username: Yup.string()
@@ -38,8 +39,9 @@ function Login() {
     password: '',
   });
 
-  const storageDate = (data: any) => {
+  const storageSession = (data: any) => {
     data = JSON.stringify(data);
+    sessionStorage.setItem('user', data);
     // console.log(String(data));
   };
   const [handleLogin, { loading }] = useMutation(LOGIN, {
@@ -53,8 +55,7 @@ function Login() {
       password: value?.password.trim(),
     },
     onCompleted(data) {
-      storageDate(data?.login);
-      console.log(data.login.email);
+      storageSession(data?.login);
       router.push('/UI/Dashboard');
     },
     onError(error) {

@@ -36,6 +36,7 @@ const Index: NextPage<Props> = ({}) => {
       }
     }
   `;
+  console.log('>>>', sessionStorage.getItem('user'));
 
   // const { data, loading, error } = useQuery(POST, {
   //   onCompleted(data) {
