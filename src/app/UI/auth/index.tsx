@@ -45,11 +45,11 @@ function Login() {
     // console.log(String(data));
   };
   const [handleLogin, { loading }] = useMutation(LOGIN, {
-    context: {
-      Headers: {
-        'x-api-key': 'fd',
-      },
-    },
+    // context: {
+    //   Headers: {
+    //     'x-api-key': 'fd',
+    //   },
+    // },
     variables: {
       username: value?.username.trim(),
       password: value?.password.trim(),

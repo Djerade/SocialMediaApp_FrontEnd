@@ -19,10 +19,18 @@ import Storie from '@/app/components/section_profile';
 import { gql } from '@apollo/client/core';
 import { useMutation } from '@apollo/client/react/hooks/useMutation';
 import { useQuery } from '@apollo/client';
+import { ReactElement } from 'react';
+import LayoutMain from '@/app/layout';
 
 interface Props {}
 
 const Index: NextPage<Props> = ({}) => {
+  let userToken: any;
+  if (typeof window !== 'undefined') {
+    const token: any = sessionStorage.getItem('user');
+    userToken = JSON?.parse(token);
+  }
+  // console.log('userToken', userToken.token);
   const POST = gql`
     query GetPosts {
       getPosts {
@@ -36,16 +44,21 @@ const Index: NextPage<Props> = ({}) => {
       }
     }
   `;
-  console.log('>>>', sessionStorage.getItem('user'));
 
-  // const { data, loading, error } = useQuery(POST, {
-  //   onCompleted(data) {
-  //     console.log('-->', data);
-  //   },
-  //   onError(error) {
-  //     console.error(error);
-  //   },
-  // });
+  const { data, loading, error } = useQuery(POST, {
+    context: {
+      Headers: {
+        'x-api-key': '123',
+        Authorization: `Bearer ${userToken.token}`,
+      },
+    },
+    onCompleted(data) {
+      console.log('->', data);
+    },
+    onError(error) {
+      console.error(error);
+    },
+  });
 
   const { colorMode, toggleColorMode } = useColorMode();
   return (

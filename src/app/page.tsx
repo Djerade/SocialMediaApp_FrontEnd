@@ -13,13 +13,14 @@ export default function Home() {
   const datauser = sessionStorage.getItem('user');
   console.log(datauser);
 
-  if (datauser) {
-    return (
-      <div>
-        <Index />
-      </div>
-    );
-  }
+  // if (datauser) {
+  //   return (
+  //     <div>
+  //       <Index />
+  //     </div>
+  //   );
+  // }
+
   return (
     <div>
       <Login />
