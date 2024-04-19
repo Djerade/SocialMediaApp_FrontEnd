@@ -21,11 +21,13 @@ import { useMutation } from '@apollo/client/react/hooks/useMutation';
 import { useQuery } from '@apollo/client';
 import { ReactElement } from 'react';
 import LayoutMain from '@/app/layout';
+import Loading from '../Splash';
 
 interface Props {}
 
 const Index: NextPage<Props> = ({}) => {
   let userToken: any;
+  let tokenBearer = 'Bearer';
   if (typeof window !== 'undefined') {
     const token: any = sessionStorage.getItem('user');
     userToken = JSON?.parse(token);
@@ -44,22 +46,26 @@ const Index: NextPage<Props> = ({}) => {
       }
     }
   `;
+  tokenBearer = tokenBearer.concat(' ', userToken?.token.toString());
 
   const { data, loading, error } = useQuery(POST, {
     context: {
       Headers: {
         'x-api-key': '123',
-        Authorization: `Bearer ${userToken.token}`,
+        Authorization: `Bearer${userToken?.token}`,
       },
     },
     onCompleted(data) {
       console.log('->', data);
     },
     onError(error) {
-      console.error(error);
+      console.error('>>', error);
     },
   });
-
+  if (loading) {
+    return <Loading />;
+  }
+  console.log(tokenBearer);
   const { colorMode, toggleColorMode } = useColorMode();
   return (
     <div>

@@ -24,18 +24,15 @@ const token = localStorage.getItem('token');
 
 const httpLink = createHttpLink({
   uri: 'http://localhost:5000/graphql',
-  headers: {
-    Authorization: `Bearer ${JSON.parse(token as string)}`,
-  },
+  // headers: {
+  //   Authorization: `Bearer ${JSON.parse(token as string)}`,
+  // },
 });
 
 export type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
   getLayout?: (page: ReactElement) => ReactNode;
 };
 
-type AppPropsWithLayout = AppProps & {
-  Component: NextPageWithLayout;
-};
 const client = new ApolloClient({
   link: httpLink,
   cache: new InMemoryCache(),
@@ -46,7 +43,6 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  console.log(`Bearer ${JSON.parse(token as string as string)}`);
   function getLayout(arg0: JSX.Element): ReactNode {
     throw new Error('Function not implemented.');
   }
