@@ -6,6 +6,8 @@ import {
   Flex,
   Icon,
   IconButton,
+  List,
+  ListItem,
   Text,
 } from '@chakra-ui/react';
 import Profile from '../profile/index';
@@ -23,60 +25,62 @@ import { BiMessageRounded } from 'react-icons/bi';
 import { CiHeart } from 'react-icons/ci';
 import { FaRegPlusSquare } from 'react-icons/fa';
 import { useRouter } from 'next/navigation';
+import Navitem from './Navitem';
 interface Item {
-  name: String;
-  value: String;
+  label: String;
+  path: String;
+  type: String;
+  icon: String;
 }
 const Sidebar = () => {
   const router = useRouter();
   const listMenu = [
     {
-      name: 'Poste',
-      value: '5842',
+      type: 'link',
+      label: 'Poste',
       icon: HiMiniHome,
-      lien: '../../UI/pages/Posts',
+      path: '../../UI/pages/Posts',
     },
     {
-      name: 'Followings',
-      value: '5842',
+      type: 'link',
+      label: 'Followings',
       icon: IoSearchSharp,
-      lien: '../../UI/pages/Followings',
+      path: '../../UI/pages/Followings',
     },
     {
-      name: 'Découvrir',
-      value: '5842',
+      type: 'link',
+      label: 'Découvrir',
       icon: FaRegCompass,
-      lien: '../../UI/pages/Followingss',
+      pathe: '../../UI/pages/Discover',
     },
     {
-      name: 'Réels',
-      value: '5842',
+      type: 'link',
+      label: 'Réels',
       icon: RiMovieLine,
-      lien: '../../UI/pages/Followings',
+      path: '../../UI/pages/Reel',
     },
     {
-      name: 'Messages',
-      value: '5842',
+      label: 'Messages',
       icon: BiMessageRounded,
-      lien: '../../UI/pages/Messages',
+      path: '../../UI/pages/Messages',
     },
     {
-      name: 'Notifications',
-      value: '5842',
+      type: 'link',
+      label: 'Notifications',
       icon: CiHeart,
-      lien: '../../UI/pages/Followings',
+      path: '../../UI/pages/Notification',
     },
     {
-      name: 'Créer  ',
-      value: '5842',
+      type: 'link',
+      label: 'Créer  ',
       icon: FaRegPlusSquare,
-      lien: '../../UI/pages/Followings',
+      path: '../../UI/pages/Create',
     },
     {
-      name: 'profil',
-      value: '5842',
+      type: 'link',
+      label: 'profil',
       icon: FaRegCompass,
-      lien: '../../UI/pages/Followings',
+      path: '../../UI/pages/Profils',
     },
   ];
   const { colorMode, toggleColorMode } = useColorMode();
@@ -102,20 +106,13 @@ const Sidebar = () => {
         </Flex>
       </Flex>
       <Center pt={10} flexDirection={'column'} mt={8}>
-        {listMenu.map((item) => (
-          <Button
-            onClick={(e) => router.push(item?.lien.toString())}
-            justifyContent={'flex-start'}
-            bg={'white'}
-            _hover={{ bg: 'gray.200' }}
-            mb={2}
-            w={'90%'}
-            aria-label={''}
-          >
-            <Icon w={6} h={6} as={item.icon} me={4} />
-            <Text variant="">{item.name}</Text>
-          </Button>
-        ))}
+        <List w={'100%'}>
+          {listMenu.map((item, index) => (
+            <ListItem key={index}>
+              <Navitem item={item} isActive={index === 0} />
+            </ListItem>
+          ))}
+        </List>
       </Center>
       <IconButton
         position={'fixed'}

@@ -1,26 +1,13 @@
 'use client';
 import { useColorMode } from '@chakra-ui/react';
-import {
-  Avatar,
-  Button,
-  Center,
-  Flex,
-  Text,
-  HStack,
-  IconButton,
-  WrapItem,
-} from '@chakra-ui/react';
+import { Flex } from '@chakra-ui/react';
 import { NextPage } from 'next';
 
 // Import
 import Story from '@/app/components/Story';
-import posts from '@/app/components/posts';
 import Storie from '@/app/components/section_profile';
 import { gql } from '@apollo/client/core';
-import { useMutation } from '@apollo/client/react/hooks/useMutation';
 import { useQuery } from '@apollo/client';
-import { ReactElement } from 'react';
-import LayoutMain from '@/app/layout';
 import Loading from '../../../components/Splash';
 
 interface Props {}
@@ -65,7 +52,7 @@ const Index: NextPage<Props> = ({}) => {
   if (loading) {
     return <Loading />;
   }
-  const { colorMode, toggleColorMode } = useColorMode();
+  useColorMode();
   return (
     <div>
       <Flex flexDirection={'column'}>
