@@ -21,7 +21,7 @@ import { useMutation } from '@apollo/client/react/hooks/useMutation';
 import { useQuery } from '@apollo/client';
 import { ReactElement } from 'react';
 import LayoutMain from '@/app/layout';
-import Loading from '../Splash';
+import Loading from '../../../components/Splash';
 
 interface Props {}
 
@@ -56,16 +56,15 @@ const Index: NextPage<Props> = ({}) => {
       },
     },
     onCompleted(data) {
-      console.log('->', data);
+      console.log(data);
     },
     onError(error) {
-      console.error('>>', error);
+      console.error(error);
     },
   });
   if (loading) {
     return <Loading />;
   }
-  console.log(tokenBearer);
   const { colorMode, toggleColorMode } = useColorMode();
   return (
     <div>

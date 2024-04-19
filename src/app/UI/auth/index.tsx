@@ -22,7 +22,7 @@ import LogoName from '@/app/components/logoName/LogoName+';
 import LOGIN from '@/app/GraphQl/Mutations/login';
 import LogoFacebook from '@/app/components/logoName/logoFb';
 import { AuthProvider } from '@/app/Context/authContext';
-import Loading from '../Splash';
+import Loading from '../../components/Splash';
 
 const infosUserSchema = Yup.object({
   username: Yup.string()
@@ -57,7 +57,7 @@ function Login() {
     },
     onCompleted(data) {
       storageSession(data?.login);
-      router.push('/UI/Dashboard');
+      router.push('/UI/pages/Dashboard');
     },
     onError(error) {
       console.log('error', error);
