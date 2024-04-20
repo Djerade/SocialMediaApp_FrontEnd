@@ -1,12 +1,8 @@
 'use client';
 import { Link } from '@chakra-ui/next-js';
-import Login from './UI/auth';
-import Index from './UI/pages/Dashboard/page';
 
 import { useContext, useState } from 'react';
-import { AuthProvider } from './Context/authContext';
-
-// import AuthProvider from './Context/authContext';
+import Login from './auth';
 
 export default function Home() {
   const [user, setuser] = useState({});

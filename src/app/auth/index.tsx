@@ -18,11 +18,11 @@ import {
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 // Imports
-import LogoName from '@/app/components/logoName/LogoName+';
-import LOGIN from '@/app/GraphQl/Mutations/login';
-import LogoFacebook from '@/app/components/logoName/logoFb';
-import { AuthProvider } from '@/app/Context/authContext';
+
 import Loading from '../../components/Splash';
+import LOGIN from '@/GraphQl/Mutations/login';
+import LogoName from '@/components/logoName/LogoName+';
+import LogoFacebook from '@/components/logoName/logoFb';
 
 const infosUserSchema = Yup.object({
   username: Yup.string()
@@ -57,7 +57,7 @@ function Login() {
     },
     onCompleted(data) {
       storageSession(data?.login);
-      router.push('/UI/pages/Dashboard');
+      router.push('/pages/Dashboard');
     },
     onError(error) {
       console.log('error', error);

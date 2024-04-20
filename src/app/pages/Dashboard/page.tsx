@@ -4,11 +4,12 @@ import { Flex } from '@chakra-ui/react';
 import { NextPage } from 'next';
 
 // Import
-import Story from '@/app/components/Story';
-import Storie from '@/app/components/section_profile';
+
 import { gql } from '@apollo/client/core';
 import { useQuery } from '@apollo/client';
 import Loading from '../../../components/Splash';
+import Story from '@/components/Story';
+import Storie from '@/components/section_profile';
 
 interface Props {}
 

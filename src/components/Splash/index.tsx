@@ -1,7 +1,7 @@
 import { Container } from '@chakra-ui/react';
 import { NextPage } from 'next';
 import Image from 'next/image';
-import logo from '../../../../public/Images/logo.png';
+import logo from '../../../public/Images/logo.png';
 
 interface Props {}
 

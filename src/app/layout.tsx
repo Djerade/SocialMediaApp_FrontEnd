@@ -1,10 +1,5 @@
 'use client';
-import {
-  ColorModeScript,
-  useColorMode,
-  useColorModeValue,
-} from '@chakra-ui/react';
-import { Box, Flex } from '@chakra-ui/react';
+import { ColorModeScript } from '@chakra-ui/react';
 import {
   ApolloClient,
   ApolloProvider,
@@ -15,12 +10,12 @@ import {
 import { fonts } from './fonts';
 import { Providers } from './providers';
 import theme from './theme';
-import { AuthProvider } from './Context/authContext';
-import { AppProps } from 'next/app';
-import { Component, JSX, ReactElement, ReactNode } from 'react';
-import { NextPage } from 'next';
 
-const token = localStorage.getItem('token');
+import { JSX, ReactElement, ReactNode } from 'react';
+import { NextPage } from 'next';
+import { AuthProvider } from '@/Context/authContext';
+
+// const token = localStorage.getItem('token');
 
 const httpLink = createHttpLink({
   uri: 'http://localhost:5000/graphql',

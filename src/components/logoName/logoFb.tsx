@@ -1,6 +1,6 @@
 import { Box } from '@chakra-ui/react';
 import Image from 'next/image';
-import logoImage from '../../../../public/Images/facebook.png';
+import logoImage from '../../../public/Images/facebook.png';
 
 const LogoFacebook = () => {
   return (
