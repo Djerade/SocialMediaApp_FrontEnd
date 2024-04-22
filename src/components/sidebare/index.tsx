@@ -39,25 +39,25 @@ const Sidebar = () => {
       type: 'link',
       label: 'Poste',
       icon: HiMiniHome,
-      path: '../../UI/pages/Posts',
+      path: '../../pages/Posts',
     },
     {
       type: 'link',
       label: 'Followings',
       icon: IoSearchSharp,
-      path: '../../UI/pages/Followings',
+      path: '../../pages/Followings',
     },
     {
       type: 'link',
       label: 'Découvrir',
       icon: FaRegCompass,
-      pathe: '../../UI/pages/Discover',
+      pathe: '../../pages/Discover',
     },
     {
       type: 'link',
       label: 'Réels',
       icon: RiMovieLine,
-      path: '../../UI/pages/Reel',
+      path: '../../pages/Reel',
     },
     {
       label: 'Messages',
@@ -68,19 +68,19 @@ const Sidebar = () => {
       type: 'link',
       label: 'Notifications',
       icon: CiHeart,
-      path: '../../UI/pages/Notification',
+      path: '../../pages/Notification',
     },
     {
       type: 'link',
       label: 'Créer  ',
       icon: FaRegPlusSquare,
-      path: '../../UI/pages/Create',
+      path: '../../pages/Create',
     },
     {
       type: 'link',
       label: 'profil',
       icon: FaRegCompass,
-      path: '../../UI/pages/Profils',
+      path: '../../pages/Profils',
     },
   ];
   const { colorMode, toggleColorMode } = useColorMode();

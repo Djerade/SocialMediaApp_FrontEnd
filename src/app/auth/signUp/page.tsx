@@ -1,7 +1,5 @@
 'use client';
-import SIGNUP from '@/app/GraphQl/Mutations/signUp';
-import LogoName from '@/app/components/logoName/LogoName+';
-import LogoFacebook from '@/app/components/logoName/logoFb';
+
 import { useMutation } from '@apollo/client';
 import {
   Flex,
@@ -19,6 +17,8 @@ import { Formik, Form, Field } from 'formik';
 import { NextPage } from 'next';
 import Link from 'next/link';
 import { useState } from 'react';
+import LogoName from '@/components/logoName/LogoName+';
+import SIGNUP from '@/GraphQl/Mutations/signUp';
 
 interface Props {}
 

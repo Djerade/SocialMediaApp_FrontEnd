@@ -17,8 +17,9 @@ const Navitem = ({ item, isActive }: any) => {
     return (
       <Box display={'flex'} alignItems={'center'} justifyContent={'center'}>
         <LinkChakra
-          onClick={(e) => navigate(path)}
+          // onClick={(e) => push(path)}
           alignItems={' center'}
+          href={path}
           flexDirection={'row'}
           justifyContent={'space-between'}
           // as={Link}
