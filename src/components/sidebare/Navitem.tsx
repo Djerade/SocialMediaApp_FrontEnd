@@ -6,7 +6,6 @@ import {
   Link as LinkChakra,
 } from '@chakra-ui/react';
 import { useRouter } from 'next/navigation';
-
 const Navitem = ({ item, isActive }: any) => {
   const { push } = useRouter();
   const navigate = (link: any) => {
@@ -17,23 +16,25 @@ const Navitem = ({ item, isActive }: any) => {
     return (
       <Box display={'flex'} alignItems={'center'} justifyContent={'center'}>
         <LinkChakra
-          // onClick={(e) => push(path)}
+          onClick={(e) => push(path)}
           alignItems={' center'}
-          href={path}
+          // href={path}
           flexDirection={'row'}
-          justifyContent={'space-between'}
+          justifyContent={'flex-start'}
           // as={Link}
           // color={isActive ? 'black' : 'gray.400'}
           bg={'white'}
           borderRadius={10}
           _hover={{ bg: 'gray.200', color: 'black', textDecoration: 'none' }}
           mb={2}
-          w={'80%'}
+          w={'90%'}
+          pr={2}
+          p={2}
+          pl={2}
           display={'flex'}
-          p={'2'}
           alignContent={'center'}
         >
-          <ListIcon as={icon} fontSize={22} m={0} />
+          <ListIcon mr={5} as={icon} fontSize={22} />
           <Text>{label}</Text>
         </LinkChakra>
       </Box>

@@ -4,7 +4,6 @@ import { Flex } from '@chakra-ui/react';
 import { NextPage } from 'next';
 
 // Import
-
 import { gql } from '@apollo/client/core';
 import { useQuery } from '@apollo/client';
 import Loading from '../../../components/Splash';

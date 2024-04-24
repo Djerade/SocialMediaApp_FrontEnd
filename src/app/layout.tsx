@@ -19,9 +19,6 @@ import { AuthProvider } from '@/Context/authContext';
 
 const httpLink = createHttpLink({
   uri: 'http://localhost:5000/graphql',
-  // headers: {
-  //   Authorization: `Bearer ${JSON.parse(token as string)}`,
-  // },
 });
 
 export type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
@@ -38,19 +35,15 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  function getLayout(arg0: JSX.Element): ReactNode {
-    throw new Error('Function not implemented.');
-  }
-
   return (
     <html lang="en" className={fonts.rubik.variable}>
       <body>
-        <AuthProvider>
-          <ColorModeScript initialColorMode={theme.initialColorMode} />
-          <ApolloProvider client={client}>
+        <ApolloProvider client={client}>
+          <AuthProvider>
+            <ColorModeScript initialColorMode={theme.initialColorMode} />
             <Providers>{children}</Providers>
-          </ApolloProvider>
-        </AuthProvider>
+          </AuthProvider>
+        </ApolloProvider>
       </body>
     </html>
   );

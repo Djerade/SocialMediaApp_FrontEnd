@@ -45,7 +45,7 @@ function Login() {
     sessionStorage.setItem('user', data);
     // console.log(String(data));
   };
-  const [handleLogin, { loading }] = useMutation(LOGIN, {
+  const [handleLogin, { loading, data }] = useMutation(LOGIN, {
     // context: {
     //   Headers: {
     //     'x-api-key': 'fd',
@@ -57,7 +57,6 @@ function Login() {
     },
     onCompleted(data) {
       storageSession(data?.login);
-      router.push('/pages/Dashboard');
     },
     onError(error) {
       console.log('error', error);
@@ -66,6 +65,9 @@ function Login() {
   function Submit(value: any) {
     setvalue(value);
     handleLogin();
+  }
+  if (data) {
+    router.push('/pages/Dashboard');
   }
   if (loading) {
     return <Loading />;

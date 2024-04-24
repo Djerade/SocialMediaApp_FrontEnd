@@ -3,6 +3,7 @@ import { Link } from '@chakra-ui/next-js';
 
 import { useContext, useState } from 'react';
 import Login from './auth/page';
+import Index from './pages/Dashboard/page';
 
 export default function Home() {
   const [user, setuser] = useState({});
@@ -19,7 +20,7 @@ export default function Home() {
 
   return (
     <div>
-      <Login />
+      <Index />
     </div>
   );
 }

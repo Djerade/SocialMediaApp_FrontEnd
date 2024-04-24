@@ -1,13 +1,15 @@
+import {
+  Avatar,
+  Center,
+  Flex,
+  HStack,
+  IconButton,
+  WrapItem,
+} from '@chakra-ui/react';
+import { IoIosAdd } from 'react-icons/io';
 
-import { Avatar, Center, Flex, HStack, IconButton, WrapItem } from "@chakra-ui/react";
-import { IoIosAdd } from "react-icons/io";
+const Posts = () => {
+  return <>here poste</>;
+};
 
-
-
-const posts = () => {
-    return <>
-        here poste 
-    </>
-}
-
-export default posts;
+export default Posts;
