@@ -7,7 +7,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     <Flex w={'100%'} flexDirection={'row'}>
       <Sidebar />
       <Flex width={'100%'} flexDirection={'column'}>
-        <NaveBar />
+        {/* <NaveBar /> */}
         <Box>{children}</Box>
       </Flex>
     </Flex>
