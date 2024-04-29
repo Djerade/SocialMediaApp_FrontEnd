@@ -4,6 +4,7 @@ import { Link } from '@chakra-ui/next-js';
 import { useContext, useState } from 'react';
 import Login from './auth/page';
 import Index from './pages/Dashboard/page';
+import Loading from '@/components/Splash';
 
 export default function Home() {
   const [user, setuser] = useState({});
@@ -20,7 +21,7 @@ export default function Home() {
 
   return (
     <div>
-      <Index />
+      <Loading />
     </div>
   );
 }
