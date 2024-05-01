@@ -39,10 +39,8 @@ export default function RootLayout({
     <html lang="en" className={fonts.rubik.variable}>
       <body>
         <ApolloProvider client={client}>
-          <AuthProvider>
-            <ColorModeScript initialColorMode={theme.initialColorMode} />
-            <Providers>{children}</Providers>
-          </AuthProvider>
+          <ColorModeScript initialColorMode={theme.initialColorMode} />
+          <Providers>{children}</Providers>
         </ApolloProvider>
       </body>
     </html>

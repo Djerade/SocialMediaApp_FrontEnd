@@ -1,5 +1,10 @@
-import { Container, Flex, Text } from '@chakra-ui/react';
+'use client';
+
+//Moduls
+import { Flex } from '@chakra-ui/react';
 import { NextPage } from 'next';
+
+// import
 import Image from 'next/image';
 import logo from '../../../public/Images/logo.png';
 
@@ -15,9 +20,6 @@ const Loading: NextPage<Props> = ({}) => {
       w={'full'}
     >
       <Image src={logo} width={50} height={50} alt="logo name" />
-      {/* <Flex marginEnd={0} position={'fixed'} justify={'center'} w={'full'}>
-        <Text variant="">From</Text>
-      </Flex> */}
     </Flex>
   );
 };

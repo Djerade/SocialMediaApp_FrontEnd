@@ -1,20 +1,6 @@
 'use client';
-import {
-  Box,
-  Button,
-  Center,
-  Flex,
-  Icon,
-  IconButton,
-  List,
-  ListItem,
-  Text,
-} from '@chakra-ui/react';
-import Profile from '../profile/index';
-import LogoName from '../logoName/LogoName+';
-import LogoImage from '../logoName/logo';
-import { useColorMode } from '@chakra-ui/react';
-//
+//Moduls
+import { Center, Flex, IconButton, List, ListItem } from '@chakra-ui/react';
 import { HiMiniHome } from 'react-icons/hi2';
 import { CiLight } from 'react-icons/ci';
 import { CiDark } from 'react-icons/ci';
@@ -25,7 +11,11 @@ import { BiMessageRounded } from 'react-icons/bi';
 import { CiHeart } from 'react-icons/ci';
 import { FaRegPlusSquare } from 'react-icons/fa';
 import { useRouter } from 'next/navigation';
+import { useColorMode } from '@chakra-ui/react';
+import LogoName from '../logoName/LogoName+';
 import Navitem from './Navitem';
+//Imports
+
 interface Item {
   label: String;
   path: String;
