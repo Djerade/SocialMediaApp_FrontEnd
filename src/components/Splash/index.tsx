@@ -11,20 +11,13 @@ const Loading: NextPage<Props> = ({}) => {
       flexDirection={'column'}
       justify={'center'}
       align={'center'}
-      bg={'green'}
       h="100vh"
       w={'full'}
     >
       <Image src={logo} width={50} height={50} alt="logo name" />
-      <Flex
-        marginEnd={0}
-        position={'fixed'}
-        justify={'center'}
-        bg={'red'}
-        w={'full'}
-      >
+      {/* <Flex marginEnd={0} position={'fixed'} justify={'center'} w={'full'}>
         <Text variant="">From</Text>
-      </Flex>
+      </Flex> */}
     </Flex>
   );
 };
