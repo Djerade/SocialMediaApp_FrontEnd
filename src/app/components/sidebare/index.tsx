@@ -64,7 +64,7 @@ const Sidebar = () => {
   ];
   const { colorMode, toggleColorMode } = useColorMode();
 
- return <Flex w='250px' h='100vh' display={{ base:"none", sm:"block" }} p={2} bg='white.100' boxShadow={"lg"}>
+ return <Flex  w='250px' h='100vh' display={{ base:"none", sm:"block" }} p={2} bg={colorMode== "dark" ? "black.100":" white.100"} boxShadow={"lg"}>
    <Flex flexDirection={'row'} align={'center'} width={"100%"} h={'50px'} justify={'center'} >
      <Flex m={2} pt={3} align={'center'} h={'50px'} w={"90px"}>
         <LogoName />  
@@ -73,9 +73,9 @@ const Sidebar = () => {
    <Center pt={10} flexDirection={'column'} mt={8}>
      {
        listMenu.map((item) => (
-         <Button  justifyContent={"flex-start"} bg={'white'} _hover={{ bg: 'gray.200' }} mb={2} w={'90%'} aria-label={""} >
+         <Button  justifyContent={"flex-start"} bg={colorMode == "light"? "white": "black.100"} _hover={{ bg: 'gray.200' }} mb={2} w={'90%'} aria-label={""} >
            <Icon w={6} h={6} as={item.icon} me={4} />
-           <Text variant=''>
+           <Text textColor={ colorMode == "dark"? "whitesmoke":"black"} variant=''>
              {item.name}
            </Text>
          </Button>
