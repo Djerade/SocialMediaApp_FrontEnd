@@ -3,7 +3,7 @@ import { Avatar, Button, Center, Flex, Text, HStack, IconButton, WrapItem } from
 import { NextPage } from 'next'
 
 // Import
-import Story from '@/app/components/Story'
+import Story from '@/app/components/story'
 import posts from '@/app/components/posts'
 import Storie from '@/app/components/section_profile';
 import { gql } from '@apollo/client/core';
@@ -43,7 +43,7 @@ const Index: NextPage<Props> = ({ }) => {
   const { colorMode,   toggleColorMode } = useColorMode();
   return <div>
     <Flex flexDirection={"column"}>
-      <Story />
+      {/* <Story /> */}
       <Storie/>
     </Flex>
   </div>

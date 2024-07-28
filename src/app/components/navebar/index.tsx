@@ -8,23 +8,25 @@ import { RiNotification4Line } from "react-icons/ri";
 import LogoName from "../logoName/LogoName+";
 
 const NaveBar = () => {
-    return <Flex justify={{ base: "center", sm:'space-between'}} align={'center'} p={3} boxShadow={'lg'}  h={'70px'} w={"100%"}>
+    return <Flex justify={{ base: "space-between", sm:'space-between'}} align={'center'} p={3} boxShadow={'lg'}  h={'70px'} w={"100%"}>
         <Flex align={'center'} display={{ base:"none", sm:"block"}} justify={'space-between'} w={"55%"}>
           <Input alignSelf={'center'} mr={2} w={'50%'} placeholder='Search' borderRadius={15} />
-          <Button  leftIcon={<IoAddSharp/>} color={'white'} borderRadius={'30px'} bgGradient='linear(to-l, #7928CA, #FF0080)'  >
+          {/* <Button  leftIcon={<IoAddSharp/>} color={'white'} borderRadius={'30px'} bgGradient='linear(to-l, #7928CA, #FF0080)'  >
             Create new post
-          </Button>
+          </Button> */}
         </Flex>
-        <Flex display={{ base:"none", sm:"block"}}   width='fit-content'>
+        <Flex display={{ base:"none", sm:"none", md:"block"}}   width='fit-content'>
           <IconButton mr={5} boxShadow={'sm'} borderRadius={'30px'} bg={'white'} _hover={{ bg: "gray" }} color={'gray'} icon={<GrSend />} aria-label={''} />
           <IconButton mr={5} boxShadow={'sm'} borderRadius={'30px'} bg={'white'} _hover={{ bg: "gray" }} color={'gray'} icon={<RiNotification4Line/>} aria-label={''} />
           <IconButton mr={5} boxShadow={'sm'}  borderRadius={'30px'}  bg={'white'}  _hover={{ bg: "gray" }} color={'gray'} icon={<IoMenuSharp />} aria-label={''} />
         </Flex>
-        <Flex flexDirection={'column'}  alignItems={'center'} display={{ base: 'block', sm:"none"}} w={"100%"} justify={"center"}>
+       {/* Modbile */}
+        <Flex bg={'red'} flexDirection={"row"}  alignItems={'center'} display={{ base: 'block', sm:"block", md:"none"}} w={"100%"} justify={"center"}>
+            {/* <Flex justify={'center'} ml={2} align={'center'} h={'50px'} w={"90px"}> */}
+             
+            {/* </Flex> */}
             <IconButton mr={5} boxShadow={'sm'} borderRadius={'30px'} bg={'white'} _hover={{ bg: "gray" }} color={'gray'} icon={<AiOutlineCamera />} aria-label={''} /> 
-            <Flex justify={'center'} ml={2} align={'center'} h={'50px'} w={"90px"}>
-               <LogoName />
-            </Flex>
+            <LogoName />
             <IconButton mr={5} boxShadow={'sm'} borderRadius={'30px'} bg={'white'} _hover={{ bg: "gray" }} color={'gray'} icon={<GrSend />} aria-label={''} />
         </Flex>
       </Flex>

@@ -40,7 +40,7 @@ export default function RootLayout({
         <ApolloProvider client={client}>
           <Providers>
               <Flex  w={'100%'} flexDirection={"row"}>
-                <Sidebar />
+                <Sidebar  />
                 <Flex width={'100%'} flexDirection={'column'}>
                   <NaveBar/> 
                   <Box>

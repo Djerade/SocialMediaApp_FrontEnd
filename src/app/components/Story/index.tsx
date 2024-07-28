@@ -1,50 +1,7 @@
+import { profile } from "@/app/constants";
 import { Avatar, Center, Flex, HStack, IconButton, WrapItem } from "@chakra-ui/react";
 import { IoIosAdd } from "react-icons/io";
 
-const profile = [
-    {
-        link_profile: 'https://bit.ly/prosper-baba'
-    },
-    {
-        link_profile: 'https://bit.ly/prosper-baba'
-    },
-    {
-        link_profile: 'https://bit.ly/prosper-baba'
-    },
-    {
-        link_profile: 'https://bit.ly/prosper-baba'
-    },
-       {
-        link_profile: 'https://bit.ly/prosper-baba'
-    },
-    {
-        link_profile: 'https://bit.ly/prosper-baba'
-    },
-    {
-        link_profile: 'https://bit.ly/prosper-baba'
-    },
-       {
-        link_profile: 'https://bit.ly/prosper-baba'
-    },
-    {
-        link_profile: 'https://bit.ly/prosper-baba'
-    },
-    {
-        link_profile: 'https://bit.ly/prosper-baba'
-    },
-       {
-        link_profile: 'https://bit.ly/prosper-baba'
-    },
-    {
-        link_profile: 'https://bit.ly/prosper-baba'
-    },
-    {
-        link_profile: 'https://bit.ly/prosper-baba'
-    },
-    {
-        link_profile: 'https://bit.ly/prosper-baba'
-    }
-];
 
 const Story = () => {
     return <>
