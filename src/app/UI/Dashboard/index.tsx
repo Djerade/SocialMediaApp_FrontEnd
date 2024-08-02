@@ -43,7 +43,7 @@ const Index: NextPage<Props> = ({ }) => {
   const { colorMode,   toggleColorMode } = useColorMode();
   return <div>
     <Flex flexDirection={"column"}>
-      {/* <Story /> */}
+      <Story />
       <Storie/>
     </Flex>
   </div>
