@@ -16,19 +16,14 @@ const NaveBar = () => {
           </Button> */}
         </Flex>
         <Flex display={{ base:"none", sm:"none", md:"block"}}   width='fit-content'>
-          <IconButton mr={5} boxShadow={'sm'} borderRadius={'30px'} bg={'white'} _hover={{ bg: "gray" }} color={'gray'} icon={<GrSend />} aria-label={''} />
-          <IconButton mr={5} boxShadow={'sm'} borderRadius={'30px'} bg={'white'} _hover={{ bg: "gray" }} color={'gray'} icon={<RiNotification4Line/>} aria-label={''} />
-          <IconButton mr={5} boxShadow={'sm'}  borderRadius={'30px'}  bg={'white'}  _hover={{ bg: "gray" }} color={'gray'} icon={<IoMenuSharp />} aria-label={''} />
+          <IconButton mr={5} boxShadow={'sm'} borderRadius={'30px'} bg={'white'} _hover={{ bg: "gray" }} color={'white.100'} icon={<GrSend />} aria-label={''} />
+          <IconButton mr={5} boxShadow={'sm'} borderRadius={'30px'} bg={'white'} _hover={{ bg: "gray" }} color={'white.100'} icon={<RiNotification4Line/>} aria-label={''} />
+          <IconButton mr={5} boxShadow={'sm'}  borderRadius={'30px'}  bg={'white'}  _hover={{ bg: "gray" }} color={'white.100'} icon={<IoMenuSharp />} aria-label={''} />
         </Flex>
        {/* Modbile */}
-        <Flex bg={'red'} flexDirection={"row"}  alignItems={'center'} display={{ base: 'block', sm:"block", md:"none"}} w={"100%"} justify={"center"}>
-            {/* <Flex justify={'center'} ml={2} align={'center'} h={'50px'} w={"90px"}> */}
-             
-            {/* </Flex> */}
-            <IconButton mr={5} boxShadow={'sm'} borderRadius={'30px'} bg={'white'} _hover={{ bg: "gray" }} color={'gray'} icon={<AiOutlineCamera />} aria-label={''} /> 
-            <LogoName />
-            <IconButton mr={5} boxShadow={'sm'} borderRadius={'30px'} bg={'white'} _hover={{ bg: "gray" }} color={'gray'} icon={<GrSend />} aria-label={''} />
-        </Flex>
+            <IconButton display={{ base:"block", sm:"none", md:"none"}} mr={5} boxShadow={'sm'} borderRadius={'30px'} bg={'white'} _hover={{ bg: "white.100" }} color={'gray'} icon={<AiOutlineCamera />} aria-label={''} /> 
+            <Flex display={{ base:"block", sm:"none", md:"none"}} ><LogoName  /></Flex>
+            <IconButton display={{ base:"block", sm:"none", md:"none"}} mr={5} boxShadow={'sm'} borderRadius={'30px'} bg={'white'} _hover={{ bg: "white.100" }} color={'gray'} icon={<GrSend />} aria-label={''} />
       </Flex>
 }
 export default NaveBar;
