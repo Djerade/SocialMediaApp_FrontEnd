@@ -1,13 +1,12 @@
 import { useColorMode } from '@chakra-ui/react';
-import { Avatar, Button, Center, Flex, Text, HStack, IconButton, WrapItem } from "@chakra-ui/react";
+import { Flex } from "@chakra-ui/react";
 import { NextPage } from 'next'
 
 // Import
 
 import { gql } from '@apollo/client/core';
-import { useMutation } from '@apollo/client/react/hooks/useMutation';
 import { useQuery } from '@apollo/client';
-import Story from '@/components/story';
+
 import Storie from '@/components/section_profile';
 
 
@@ -43,7 +42,7 @@ const Index: NextPage<Props> = ({ }) => {
   const { colorMode,   toggleColorMode } = useColorMode();
   return <div>
     <Flex flexDirection={"column"}>
-      <Story />
+      {/* <Story /> */}
       <Storie/>
     </Flex>
   </div>
