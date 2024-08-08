@@ -1,9 +1,7 @@
-'use client';
-import { Link } from '@chakra-ui/next-js';
-
-import { useContext, useState } from 'react';
-import Login from './auth/page';
-import Index from './pages/Dashboard/page';
+'use client'
+import { Link } from '@chakra-ui/next-js'
+import Login from './auth'
+import { useState } from "react";
 
 export default function Home() {
   const [user, setuser] = useState({});
@@ -20,7 +18,7 @@ export default function Home() {
 
   return (
     <div>
-      <Index />
+      <Login/>
     </div>
   );
 }

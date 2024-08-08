@@ -1,4 +1,11 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {}
+// next.config.js
+require('dotenv').config();
 
-module.exports = nextConfig
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  env: {
+    GRAPHQL_API : "http://localhost:5000/graphql",
+  },
+};
+
+module.exports = nextConfig;

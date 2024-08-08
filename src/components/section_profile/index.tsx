@@ -4,7 +4,7 @@ const Storie = () => {
     return <>
         <HStack p={7} spacing={5}>
             <Text variant=''>
-                sction
+                section
             </Text>
         </HStack>
     </>
