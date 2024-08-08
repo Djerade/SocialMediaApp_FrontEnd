@@ -1,11 +1,11 @@
-import { profile } from "@/app/constants";
+import { profile } from "@/constants";
 import { Avatar, Center, Flex, HStack, IconButton, WrapItem, Text, Box } from "@chakra-ui/react";
 import { IoIosAdd } from "react-icons/io";
 
 
 const Story = () => {
     return <>
-        <Flex flexDirection={'column'} m={'2'}>
+        <Flex  bg={"red"}  flexDirection={'column'} m={'2'}>
             <Flex align={'center'} p={3}  width={'100%'} justify={"space-between"} flexDirection={'row'}>
                 <Text textColor={'black'} fontWeight={'bold'}>
                     Stories
@@ -18,15 +18,15 @@ const Story = () => {
                 </Flex>
             </Flex>
             <Box
-            overflow={'auto'}
-            width={'100%'}
-            css={{
-                '&::-webkit-scrollbar': {
-                    display: 'none',
-                },
-                '-ms-overflow-style': 'none',
-                'scrollbar-width': 'none',
-            }}
+                overflow={'auto'}
+                width={'100%'}
+                css={{
+                    '&::-webkit-scrollbar': {
+                        display: 'none',
+                    },
+                    '-ms-overflow-style': 'none',
+                    'scrollbar-width': 'none',
+                }}
             >
                 <HStack p={7} spacing={5}>
                     {

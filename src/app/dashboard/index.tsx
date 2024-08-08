@@ -3,12 +3,12 @@ import { Avatar, Button, Center, Flex, Text, HStack, IconButton, WrapItem } from
 import { NextPage } from 'next'
 
 // Import
-import Story from '@/app/components/story'
-import posts from '@/app/components/posts'
-import Storie from '@/app/components/section_profile';
+
 import { gql } from '@apollo/client/core';
 import { useMutation } from '@apollo/client/react/hooks/useMutation';
 import { useQuery } from '@apollo/client';
+import Story from '@/components/story';
+import Storie from '@/components/section_profile';
 
 
 

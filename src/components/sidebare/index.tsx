@@ -1,14 +1,12 @@
 'use client'
-import { Box, Button, Center, Flex, Icon, IconButton, Text } from "@chakra-ui/react"
-import Profile from "../profile/index"
+import { Button, Center, Flex, Icon, IconButton, Text } from "@chakra-ui/react"
 import LogoName from "../logoName/LogoName+"
-import LogoImage from "../logoName/logo";
 import { useColorMode } from '@chakra-ui/react';
 //
 import { CiLight } from "react-icons/ci";
 import { CiDark } from "react-icons/ci";
-import { ReactElement, JSXElementConstructor, ReactNode, ReactPortal, PromiseLikeOfReactNode } from "react";
-import { listMenu } from "@/app/constants";
+import { listMenu } from "@/constants";
+
 
 interface Item {
   name: String;

@@ -1,21 +1,18 @@
 'use client'
-import Bouton from '@/app/components/Bouton'
-import { useRouter } from 'next/navigation';
-import InputForm from '@/app/components/Inpute'
-import LogoName from '@/app/components/logoName/LogoName+'
-import { Button, Text, Box, Flex, FormControl, Input, Divider, AbsoluteCenter } from '@chakra-ui/react'
+
+import { Button, Text, Box, Flex, Divider, AbsoluteCenter } from '@chakra-ui/react'
 import { NextPage } from 'next'
-import { useMutation } from '@apollo/client';
-import { error } from 'console';
-import { gql } from "@apollo/client";
 import { useState } from 'react';
-import LOGIN from '@/app/GraphQl/Mutations/login';
+import { useRouter } from 'next/router';
+import InputForm from '@/components/Inpute';
+import LogoName from '@/components/logoName/LogoName+';
+
 
 
 interface Props {}
 
 const Login: NextPage<Props> = ({ }) => {
-    const router = useRouter();
+    // const router = useRouter();
     const [value, setvalue] = useState({
         username: "",
         password: "",
@@ -45,9 +42,9 @@ const Login: NextPage<Props> = ({ }) => {
     
 
 
-    function dashboard() {
-        router.push('/Dashboard');
-    }
+    // function dashboard() {
+    //     router.push('/Dashboard');
+    // }
     
     return <Flex align={'center'} justify={'center'} w={{ base: "", sm: "", md: "", lg: "" }}>
         <Flex align={'center'} w={"100%"} flexDirection={'column'}>

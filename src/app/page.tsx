@@ -1,12 +1,12 @@
 'use client'
 import { Link } from '@chakra-ui/next-js'
-import Login from './UI/auth'
-import Index from './UI/Dashboard'
+import Login from './auth'
+
 
 export default function Home() {
   return (
     <div>
-      <Index/>
+      <Login/>
     </div>
   )
 }

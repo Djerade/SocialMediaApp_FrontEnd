@@ -1,6 +1,6 @@
 import { Box } from "@chakra-ui/react"
 import Image from "next/image"
-import logoNameImage  from "../../../../public/Images/instagram-name-logo.png";
+import logoNameImage  from "../../../public/Images/instagram-name-logo.png";
 
 
 const LogoName = () => {
