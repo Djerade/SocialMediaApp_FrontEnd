@@ -1,20 +1,16 @@
 'use client'
+//Moduls
 import { Button, Center, Flex, Icon, IconButton, Text } from "@chakra-ui/react"
 import LogoName from "../logoName/LogoName+"
 import { useColorMode } from '@chakra-ui/react';
-//
+//Import
 import { CiLight } from "react-icons/ci";
 import { CiDark } from "react-icons/ci";
 import { listMenu } from "@/constants";
 
 
-interface Item {
-  name: String;
-  value: String;
-  icon: String;
-}
-const Sidebar = () => {
 
+const Sidebar = () => {
  const { colorMode, toggleColorMode } = useColorMode();
  return( <Flex  display={{ base:"none", sm:"none", md:"block" }} w='250px' h='100vh'  p={2} bg={colorMode== "dark" ? "black.100":" white.100"} boxShadow={"lg"}>
    <Flex flexDirection={'row'} align={'center'} width={"100%"} h={'50px'} justify={'center'} >
