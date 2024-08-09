@@ -3,7 +3,7 @@
 import { Button, Text, Box, Flex, Divider, AbsoluteCenter, Input, FormControl, FormErrorMessage } from '@chakra-ui/react'
 import { NextPage } from 'next'
 import { useEffect, useState } from 'react';
-import { useRouter } from 'next/router';
+import { useRouter } from 'next/navigation';
 import InputForm from '@/components/Inpute';
 import LogoName from '@/components/logoName/LogoName+';
 import { Form } from 'react-hook-form';
@@ -20,7 +20,7 @@ type Inputs = {
 interface Props {}
 
 const Login: NextPage<Props> = ({ }) => {
-    // const router = useRouter();
+  const router = useRouter();
   const [value, setvalue]  = useState<Inputs| null>(null);    
   const [create, { data, loading, error }] = useMutation(
       LOGIN,
@@ -29,17 +29,12 @@ const Login: NextPage<Props> = ({ }) => {
           username: value?.username,
           password: value?.password
           }, onCompleted(data) {
-              console.log('data--------',data);
+              router.push('/dashboard');
           }, onError(error) {
                console.log(error.message);
           }
       }
   );
-
-  // function dashboard() {
-  //     router.push('/Dashboard');
-  // }
-
   const { register, handleSubmit, formState: { errors } } = useForm<Inputs>();
 
   const onSubmit: SubmitHandler<Inputs> = data => {
