@@ -1,7 +1,7 @@
 import { gql } from "@apollo/client";
 
 
-const POST = gql`
+const GET_POST = gql`
     query GetPosts {
         getPosts {
             id
@@ -15,6 +15,6 @@ const POST = gql`
     }
 `;
 
-export default POST
+export default GET_POST;
 
 

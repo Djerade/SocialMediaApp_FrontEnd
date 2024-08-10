@@ -28,6 +28,7 @@ const Login: NextPage<Props> = ({ }) => {
         password: value?.password
         }, onCompleted(data) {
             router.push('/dashboard');
+            localStorage.setItem('token', data?.login?.token);
         }, onError(error) {
              console.log(error.message);
         }
