@@ -5,8 +5,9 @@ import { NextPage } from 'next'
 
 // Import
 import { useQuery } from '@apollo/client';
-import Storie from '@/components/section_profile';
+import Storie from '@/components/stories';
 import GET_POST from '@/GraphQl/Queries/getPost';
+import Posts from "@/components/posts";
 
 
 
@@ -30,6 +31,7 @@ if (loading) {
   return <div>
     <Flex flexDirection={"column"}>
       <Storie/>
+      <Posts/>
     </Flex>
   </div>
 }

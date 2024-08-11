@@ -6,7 +6,7 @@ const Profile = () => {
             <Avatar
                 name='mon profile'
                 src='https://bit.ly/prosper-baba'
-                size={'xl'}
+                 size={{ base: "md", sm:"md", md:"md", lg:"md" }}
             />
         </WrapItem>
     </Flex>

@@ -52,125 +52,46 @@ const listMenu = [
 
   const profile = [
     {
-        link_profile: 'https://bit.ly/prosper-baba'
+      "name": "Dan Abrahmov",
+      "src": "https://bit.ly/dan-abramov"
     },
     {
-        link_profile: 'https://bit.ly/prosper-baba'
+      "name": "Ryan Florence",
+      "src": "https://bit.ly/ryan-florence"
     },
     {
-        link_profile: 'https://bit.ly/prosper-baba'
+      "name": "Segun Adebayo",
+      "src": "https://bit.ly/sage-adebayo"
     },
     {
-        link_profile: 'https://bit.ly/prosper-baba'
-    },
-       {
-        link_profile: 'https://bit.ly/prosper-baba'
+      "name": "Kent Dodds",
+      "src": "https://bit.ly/kent-c-dodds"
     },
     {
-        link_profile: 'https://bit.ly/prosper-baba'
+      "name": "Prosper Otemuyiwa",
+      "src": "https://bit.ly/prosper-baba"
     },
     {
-        link_profile: 'https://bit.ly/prosper-baba'
-    },
-       {
-        link_profile: 'https://bit.ly/prosper-baba'
+      "name": "Christian Nwamba",
+      "src": "https://bit.ly/code-beast"
     },
     {
-        link_profile: 'https://bit.ly/prosper-baba'
+      "name": "Bruno Simon",
+      "src": "https://bit.ly/bruno-simon"
     },
     {
-        link_profile: 'https://bit.ly/prosper-baba'
+      "name": "Guillermo Rauch",
+      "src": "https://bit.ly/guillermo-rauch"
     },
     {
-      link_profile: 'https://bit.ly/prosper-baba'
-  },
-  {
-      link_profile: 'https://bit.ly/prosper-baba'
-  },
-  {
-      link_profile: 'https://bit.ly/prosper-baba'
-  },
-  {
-    link_profile: 'https://bit.ly/prosper-baba'
-},
-{
-    link_profile: 'https://bit.ly/prosper-baba'
-},
-{
-    link_profile: 'https://bit.ly/prosper-baba'
-},
-
-    
-{
-  link_profile: 'https://bit.ly/prosper-baba'
-},
-{
-  link_profile: 'https://bit.ly/prosper-baba'
-},
-
-{
-  link_profile: 'https://bit.ly/prosper-baba'
-},
-{
-  link_profile: 'https://bit.ly/prosper-baba'
-},
-
-{
-  link_profile: 'https://bit.ly/prosper-baba'
-},
-{
-  link_profile: 'https://bit.ly/prosper-baba'
-},
-
-{
-  link_profile: 'https://bit.ly/prosper-baba'
-},
-{
-  link_profile: 'https://bit.ly/prosper-baba'
-},
-
-{
-  link_profile: 'https://bit.ly/prosper-baba'
-},
-{
-  link_profile: 'https://bit.ly/prosper-baba'
-},
-
-{
-  link_profile: 'https://bit.ly/prosper-baba'
-},
-{
-  link_profile: 'https://bit.ly/prosper-baba'
-},
-
-{
-  link_profile: 'https://bit.ly/prosper-baba'
-},
-{
-  link_profile: 'https://bit.ly/prosper-baba'
-},
-
-{
-  link_profile: 'https://bit.ly/prosper-baba'
-},
-{
-  link_profile: 'https://bit.ly/prosper-baba'
-},
-
-       {
-        link_profile: 'https://bit.ly/prosper-baba'
+      "name": "Alexis Kallio",
+      "src": "https://bit.ly/alexis-kallio"
     },
     {
-        link_profile: 'https://bit.ly/prosper-baba'
-    },
-    {
-        link_profile: 'https://bit.ly/prosper-baba'
-    },
-    {
-        link_profile: 'https://bit.ly/prosper-baba'
+      "name": "Maggie Appleton",
+      "src": "https://bit.ly/maggie-appleton"
     }
-];
-
+  ]
 
   export {
     listMenu, 

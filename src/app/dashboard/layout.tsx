@@ -20,10 +20,10 @@ export default function RootLayout({
   return (
     <html lang='en' className={fonts.rubik.variable}>
       <body>
-          <Flex bg={ colorMode == "dark" ? "black": "white"} w={'100%'} flexDirection={"row"}>
+          <Flex textColor={colorMode == 'light' ? 'black': 'white'} bg={ colorMode == "dark" ? "black": "white"} w={'100%'} flexDirection={"row"}>
             <Sidebar  />
             <Flex width={'100%'} flexDirection={'column'}>  
-              <NaveBar/> 
+              {/* <NaveBar/>  */}
               <Box>
                 {children}
               </Box>
