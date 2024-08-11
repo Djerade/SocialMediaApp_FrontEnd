@@ -1,7 +1,6 @@
 
-import { Avatar, Center, Flex, HStack, IconButton,  useColorMode, WrapItem,  Text, Spacer } from "@chakra-ui/react";
+import { Flex, IconButton,  useColorMode, Text, Spacer } from "@chakra-ui/react";
 import { GrMore } from "react-icons/gr";
-import { IoIosAdd } from "react-icons/io";
 import Profile from "../profile";
 
 
