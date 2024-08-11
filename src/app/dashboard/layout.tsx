@@ -22,7 +22,7 @@ export default function RootLayout({
       <body>
           <Flex bg={ colorMode == "dark" ? "black": "white"} w={'100%'} flexDirection={"row"}>
             <Sidebar  />
-            <Flex width={'100%'} flexDirection={'column'}>
+            <Flex width={'100%'} flexDirection={'column'}>  
               <NaveBar/> 
               <Box>
                 {children}
