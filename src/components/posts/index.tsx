@@ -5,6 +5,7 @@ import {
   Text,
   Spacer,
   Box,
+  Textarea,
 } from '@chakra-ui/react';
 import { GrMore } from 'react-icons/gr';
 import Profile from '../profile';
@@ -83,7 +84,39 @@ const Posts = () => {
           alt="Dan Abramov"
         />
       </Flex>
-      <Flex></Flex>
+      <Flex flexDirection={'column'}>
+        <Flex align={'center'} justify={'space-between'}>
+          <Flex flexDirection={'row'}>
+            <IconButton
+              color={colorMode == 'light' ? 'black' : 'white'}
+              bg={colorMode == 'light' ? 'white' : 'black'}
+              icon={<GrMore />}
+              aria-label={''}
+            />
+            <IconButton
+              color={colorMode == 'light' ? 'black' : 'white'}
+              bg={colorMode == 'light' ? 'white' : 'black'}
+              icon={<GrMore />}
+              aria-label={''}
+            />
+            <IconButton
+              color={colorMode == 'light' ? 'black' : 'white'}
+              bg={colorMode == 'light' ? 'white' : 'black'}
+              icon={<GrMore />}
+              aria-label={''}
+            />
+          </Flex>
+          <IconButton
+            color={colorMode == 'light' ? 'black' : 'white'}
+            bg={colorMode == 'light' ? 'white' : 'black'}
+            icon={<GrMore />}
+            aria-label={''}
+          />
+        </Flex>
+        <Flex>
+          <Text>bde_ucao, un bon moment passé ensemble pendant 3 jours</Text>
+        </Flex>
+      </Flex>
     </Flex>
   );
 };
