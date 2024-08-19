@@ -22,7 +22,7 @@ export default function RootLayout({
       <body>
           <Flex textColor={colorMode == 'light' ? 'black': 'white'} bg={ colorMode == "dark" ? "black": "white"} w={'100%'} flexDirection={"row"}>
             <Sidebar  />
-            <Flex width={'100%'} flexDirection={'column'}>  
+            <Flex ml={{md:'250px', lg:'250px'}} width={'100%'} flexDirection={'column'}>  
               {/* <NaveBar/>  */}
               <Box>
                 {children}

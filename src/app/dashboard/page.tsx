@@ -20,16 +20,13 @@ const { data, loading, error } = useQuery(GET_POST, {
   onCompleted(data) {
     console.log(data);
 }, onError(error) {
-    console.error(error) 
+    console.error(error)  
 },});
-
-if (loading) {
-  return(<Flex>loading</Flex>);
-}
-
-  
+  if (loading) {
+    return(<Flex>loading</Flex>);
+  }
   return <div>
-    <Flex flexDirection={"column"}>
+    <Flex p={"90px"} justifyContent={"center"} flexDirection={"column"}>
       <Storie/>
       <Posts/>
     </Flex>
