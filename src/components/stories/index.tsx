@@ -4,10 +4,10 @@ import { Avatar, AvatarGroup, Box, VStack,Text, Flex, HStack, WrapItem } from "@
 
 const Storie = () => {
     return (
-          <HStack mb={3}   align={'center'} spacing={2} width={{ base:"100%",  sm:"100%", md:"60%", lg:"60%"}} >
+          <HStack mb={5}   alignSelf={'center'} spacing={2} width={{ base:"auto",  sm:"auto", md:"auto", lg:"auto"}} >
             {
               profile.map((item: any) =>(
-                  <VStack >
+                  <VStack id={item.id} >
                       <WrapItem borderRadius={'30px'} bgGradient='linear(to-l, #7928CA, #FF0080 )' p={1}>
                           <Avatar
                               name={item.name}
@@ -22,7 +22,7 @@ const Storie = () => {
               ))
             }
         </HStack>
-    );
+    );          
 }
 
 export default Storie;

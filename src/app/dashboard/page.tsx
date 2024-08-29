@@ -8,6 +8,7 @@ import { useQuery } from '@apollo/client';
 import Storie from '@/components/stories';
 import GET_POST from '@/GraphQl/Queries/getPost';
 import Posts from "@/components/posts";
+import Suggestion from "@/components/suggestion";
 
 
 
@@ -26,9 +27,14 @@ const { data, loading, error } = useQuery(GET_POST, {
     return(<Flex>loading</Flex>);
   }
   return <div>
-    <Flex p={"90px"} justifyContent={"center"} flexDirection={"column"}>
-      <Storie/>
-      <Posts/>
+    <Flex p={"20px"} justifyContent={"center"} flexDirection={"row"}>
+      <Flex justify={'center'}   width={"80%"} flexDirection={'column'}   align={'center'}>
+        <Storie/>
+        <Posts/>
+      </Flex>
+      <Flex w={"20%"}>
+         <Suggestion/>
+      </Flex>
     </Flex>
   </div>
 }

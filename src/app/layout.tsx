@@ -2,14 +2,11 @@
 //Moduls
 import { ColorModeScript } from '@chakra-ui/react'
 import { ApolloProvider } from "@apollo/client";
-
 // Impots
 import { fonts } from './fonts'
 import { Providers } from './providers'
 import theme from './theme'
 import client from '@/lib/client';
-
-
 
 export default function RootLayout({
   children, 

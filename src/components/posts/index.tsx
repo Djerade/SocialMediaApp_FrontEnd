@@ -1,3 +1,4 @@
+'use client'
 import {
   Flex,
   IconButton,
@@ -11,7 +12,8 @@ import {
 } from '@chakra-ui/react';
 import { GrMore } from 'react-icons/gr';
 import { FiMessageCircle } from "react-icons/fi";
-import { IoIosSend, IoIosHeartEmpty } from "react-icons/io";
+import { IoIosSend, IoIosHeartEmpty,  } from "react-icons/io";
+import { GoSmiley } from "react-icons/go";
 import { FaRegBookmark } from "react-icons/fa";
 import Profile from '../profile';
 import { Image } from '@chakra-ui/react';
@@ -19,7 +21,7 @@ import { Image } from '@chakra-ui/react';
 const Posts = () => {
   const { colorMode, toggleColorMode } = useColorMode();
   return (
-    <Flex  align={'center'} justify ={"center"} flexDirection={'column'} w={{ base: '90%', sm: '90%', md: '35%' }}>
+    <Flex p={2}   alignSelf={'center'} justify ={"center"} flexDirection={'column'} w={{ base: '100%', sm: '100%', md: '50%' }}>
       <Flex mb={1} align={'center'} w={'100%'} justify={'space-between'}>
         <Flex align={'center'} flexDirection={'row'}>
           <Profile />
@@ -71,7 +73,7 @@ const Posts = () => {
         </Flex>
         <Flex flexDirection={'column'}>
           <Flex mt={1} mb={1} align='center' flexDirection={'row'}>
-              <WrapItem borderRadius={'60px'} bgGradient='linear(to-l, #7928CA, #FF0080 )' p={1}>
+              <WrapItem mr={1} borderRadius={'60px'} bgGradient='linear(to-l, #7928CA, #FF0080 )' p={1}>
                 <Avatar
                     // name='mon profile'
                     src='https://bit.ly/prosper-baba'
@@ -81,7 +83,7 @@ const Posts = () => {
                 />
               </WrapItem>
             <Text>
-              71 J'aime
+              71 J'aime 
             </Text>
           </Flex>
           <Text fontWeight ='semibold' >bde_ucao, un bon moment passé ensemble pendant 3 jours</Text>
@@ -91,7 +93,7 @@ const Posts = () => {
             <IconButton
                color={colorMode == 'light' ? 'gray.500' : 'white'}
                bg={colorMode == 'light' ? 'white' : 'black'}
-               icon={<FaRegBookmark  />}
+               icon={<GoSmiley/>}
                size={"12px"}
                aria-label={''}
              />

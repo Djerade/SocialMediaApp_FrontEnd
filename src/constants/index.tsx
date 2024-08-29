@@ -10,84 +10,102 @@ const listMenu = [
     {
       "name": "Poste",
       "value": "5842",
-      "icon": HiMiniHome
+      "icon": HiMiniHome,
+       path: "/post"
     },
     
     {
       "name": "Followings",
       "value": "5842",
-      "icon": IoSearchSharp
+      "icon": IoSearchSharp,
+      path: "/post"
     },
     {
       "name": "Découvrir",
       "value": "5842",
-      "icon": FaRegCompass 
+      "icon": FaRegCompass,
+      path: "/post"
     },
         {
       "name": "Réels",
       "value": "5842",
-      "icon": RiMovieLine 
+      "icon": RiMovieLine,
+      path: "/post" 
     },
     {
       "name": "Messages",
       "value": "5842",
-      "icon": BiMessageRounded
+      "icon": BiMessageRounded,
+      path: "/post"
     },
     {
       "name": "Notifications",
       "value": "5842",
-      "icon": CiHeart 
+      "icon": CiHeart,
+      path: "/post" 
     },
     {
       "name": "Créer  ",
       "value": "5842",
-      "icon": FaRegPlusSquare
+      "icon": FaRegPlusSquare,
+      path: "/post"
     },
     {
       "name": "profil",
       "value": "5842",
-      "icon": FaRegCompass 
+      "icon": FaRegCompass,
+      path: "/post" 
     }
   ];
 
   const profile = [
     {
+      "id": 1,
       "name": "Dan Abrahmov",
       "src": "https://bit.ly/dan-abramov"
     },
     {
+      "id": 2,
       "name": "Ryan Florence",
       "src": "https://bit.ly/ryan-florence"
     },
     {
+      "id": 3,
       "name": "Segun Adebayo",
       "src": "https://bit.ly/sage-adebayo"
     },
     {
+      "id": 4,
       "name": "Kent Dodds",
       "src": "https://bit.ly/kent-c-dodds"
     },
     {
+      "id": 5,
       "name": "Prosper Otemuyiwa",
       "src": "https://bit.ly/prosper-baba"
     },
     {
+      "id": 6,
       "name": "Christian Nwamba",
       "src": "https://bit.ly/code-beast"
     },
     {
+      "id": 7,
       "name": "Bruno Simon",
       "src": "https://bit.ly/bruno-simon"
     },
     {
+      "id": 8,
       "name": "Guillermo Rauch",
       "src": "https://bit.ly/guillermo-rauch"
     },
     {
+      "id": 9,
       "name": "Alexis Kallio",
       "src": "https://bit.ly/alexis-kallio"
     },
     {
+      "id": 10,
       "name": "Maggie Appleton",
       "src": "https://bit.ly/maggie-appleton"
     }
