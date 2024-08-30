@@ -1,6 +1,6 @@
 'use client'
 //Module
-import { Flex } from "@chakra-ui/react";
+import { Flex, Text } from "@chakra-ui/react";
 import { NextPage } from 'next'
 
 // Import
@@ -9,6 +9,8 @@ import Storie from '@/components/stories';
 import GET_POST from '@/GraphQl/Queries/getPost';
 import Posts from "@/components/posts";
 import Suggestion from "@/components/suggestion";
+import Profile from "@/components/profile";
+import Other from "@/components/other";
 
 
 
@@ -27,13 +29,21 @@ const { data, loading, error } = useQuery(GET_POST, {
     return(<Flex>loading</Flex>);
   }
   return <div>
-    <Flex p={"20px"} justifyContent={"center"} flexDirection={"row"}>
-      <Flex justify={'center'}   width={"80%"} flexDirection={'column'}   align={'center'}>
+    <Flex pt={"20px"} pr={'100px'} pl={'100px'}  flexDirection={"row"}>
+      <Flex  justify={'center'}   width={"70%"} flexDirection={'column'}   align={'center'}>
         <Storie/>
         <Posts/>
       </Flex>
-      <Flex w={"20%"}>
+      <Flex pr={3} pl={3} display={{ base: "none", sm:"none", md:"block"}} w={"30%"}>
+         <Flex justifyContent={"start"} align='center' bg="red" >
+            <Profile/>
+            <Flex  flexDirection ={"column"}>
+              <Text fontSize={"12px"} fontWeight={"semibold"}  variant=''>djeradegolbeparfait </Text>
+              <Text fontSize={"10px"} textColor={'grey'}  variant=''>Djeradé Golbé Parfait</Text>
+            </Flex>
+         </Flex>
          <Suggestion/>
+         <Other/>
       </Flex>
     </Flex>
   </div>

@@ -7,10 +7,6 @@ import NaveBar from '@/components/navebar';
 import Sidebar from '@/components/sidebare';
 import { fonts } from '../fonts';
 
-
-
-
-
 export default function RootLayout({
   children, 
 }: {

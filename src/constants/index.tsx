@@ -58,6 +58,50 @@ const listMenu = [
     }
   ];
 
+
+  const suggestions = [
+    {
+      "id": 1,
+      "name": "Dan Abrahmov",
+      "photo": "https://bit.ly/dan-abramov",
+      "followers":"Ryan Florence"
+    },
+    {
+      "id": 2,
+      "name": "Ryan Florence",
+      "photo": "https://bit.ly/ryan-florence",
+      "followers":"Ryan Florence"
+    },
+    {
+      "id": 2,
+      "name": "Ryan Florence",
+      "photo": "https://bit.ly/ryan-florence",
+      "followers":"Ryan Florence"
+    },
+    {
+      "id": 2,
+      "name": "Ryan Florence",
+      "photo": "https://bit.ly/ryan-florence",
+      "followers":"Ryan Florence"
+    },
+    {
+      "id": 2,
+      "name": "Ryan Florence",
+      "photo": "https://bit.ly/ryan-florence",
+      "followers":"Ryan Florence"
+    },
+  ];
+
+  const posts = [
+    {
+      "id": 1,
+      "images":"https://i.pinimg.com/564x/47/71/33/47713376bf139b945fbfaaffe4c9dc4d.jpg",
+      "auteur":"bde",
+      "likers":"",
+      "commentaire":"",
+    }
+  ]
+
   const profile = [
     {
       "id": 1,
@@ -113,5 +157,6 @@ const listMenu = [
 
   export {
     listMenu, 
-    profile
+    profile,
+    suggestions
 };
