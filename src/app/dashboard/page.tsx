@@ -1,6 +1,6 @@
 'use client'
 //Module
-import { Flex, Text, Box } from "@chakra-ui/react";
+import { Flex, Text, Box, Divider } from "@chakra-ui/react";
 import { NextPage } from 'next'
 
 // Import
@@ -31,8 +31,12 @@ const { data, loading, error } = useQuery(GET_POST, {
   }
   return <div>
     <Flex pt={"20px"} pr={'100px'} pl={'100px'}  flexDirection={"row"}>
-      <Flex  justify={'center'}   width={"70%"} flexDirection={'column'}   align={'center'}>
+      <Flex  justify={'center'}   width={{ base:"100%", sm:"100%", md:"100%", lg:"70%"}} flexDirection={'column'}   align={'center'}>
         <Storie/>
+        <Posts/>
+        <Divider />
+        <Posts/>
+        <Divider />
         <Posts/>
       </Flex>
       <Flex pr={3} pl={3} display={{ base: "none", sm:"none", md:"block"}} w={"30%"}>

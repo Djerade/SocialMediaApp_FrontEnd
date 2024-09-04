@@ -20,9 +20,7 @@ export default function RootLayout({
             <Sidebar  />
             <Flex ml={{md:'250px', lg:'250px'}} width={'100%'} flexDirection={'column'}>  
               {/* <NaveBar/>  */}
-              <Box>
                 {children}
-              </Box>
             </Flex>
           </Flex>
       </body>

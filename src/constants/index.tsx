@@ -11,50 +11,50 @@ const listMenu = [
       "name": "Poste",
       "value": "5842",
       "icon": HiMiniHome,
-       path: "/post"
+       path: "/dashboard"
     },
     
     {
       "name": "Followings",
       "value": "5842",
       "icon": IoSearchSharp,
-      path: "/post"
+      path: "/followings"
     },
     {
       "name": "Découvrir",
       "value": "5842",
       "icon": FaRegCompass,
-      path: "/post"
+      path: "/discover"
     },
         {
       "name": "Réels",
       "value": "5842",
       "icon": RiMovieLine,
-      path: "/post" 
+      path: "/real" 
     },
     {
       "name": "Messages",
       "value": "5842",
       "icon": BiMessageRounded,
-      path: "/post"
+      path: "/messages"
     },
     {
       "name": "Notifications",
       "value": "5842",
       "icon": CiHeart,
-      path: "/post" 
+      path: "/notification" 
     },
     {
       "name": "Créer  ",
       "value": "5842",
       "icon": FaRegPlusSquare,
-      path: "/post"
+      path: "/newPost"
     },
     {
       "name": "profil",
       "value": "5842",
       "icon": FaRegCompass,
-      path: "/post" 
+      path: "/profils" 
     }
   ];
 

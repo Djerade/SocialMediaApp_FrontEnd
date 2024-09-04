@@ -21,7 +21,7 @@ import { Image } from '@chakra-ui/react';
 const Posts = () => {
   const { colorMode, toggleColorMode } = useColorMode();
   return (
-    <Flex p={2}     alignSelf={'center'} justify ={"center"} flexDirection={'column'} w={{ base: '100%', sm: '100%', md: '50%', lg:"50%" }}>
+    <Flex p={2} alignSelf={'center'} justify ={"center"} flexDirection={'column'} w={{ base: '100%', sm: '100%', md: '50%', lg:"50%" }}>
       <Flex mb={1} align={'center'} w={'100%'} justify={'space-between'}>
         <Flex  align={'center'} flexDirection={'row'}>
           <Profile />
