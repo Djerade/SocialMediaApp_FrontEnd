@@ -1,6 +1,6 @@
 'use client'
 //Module
-import { Flex, Text } from "@chakra-ui/react";
+import { Flex, Text, Box } from "@chakra-ui/react";
 import { NextPage } from 'next'
 
 // Import
@@ -11,6 +11,7 @@ import Posts from "@/components/posts";
 import Suggestion from "@/components/suggestion";
 import Profile from "@/components/profile";
 import Other from "@/components/other";
+import SectionProfile from "@/components/sectionProfile";
 
 
 
@@ -35,15 +36,9 @@ const { data, loading, error } = useQuery(GET_POST, {
         <Posts/>
       </Flex>
       <Flex pr={3} pl={3} display={{ base: "none", sm:"none", md:"block"}} w={"30%"}>
-         <Flex justifyContent={"start"} align='center' bg="red" >
-            <Profile/>
-            <Flex  flexDirection ={"column"}>
-              <Text fontSize={"12px"} fontWeight={"semibold"}  variant=''>djeradegolbeparfait </Text>
-              <Text fontSize={"10px"} textColor={'grey'}  variant=''>Djeradé Golbé Parfait</Text>
-            </Flex>
-         </Flex>
-         <Suggestion/>
-         <Other/>
+        <SectionProfile/>
+        <Suggestion/>
+        <Other/>
       </Flex>
     </Flex>
   </div>

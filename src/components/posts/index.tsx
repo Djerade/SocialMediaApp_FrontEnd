@@ -23,9 +23,9 @@ const Posts = () => {
   return (
     <Flex p={2}     alignSelf={'center'} justify ={"center"} flexDirection={'column'} w={{ base: '100%', sm: '100%', md: '50%', lg:"50%" }}>
       <Flex mb={1} align={'center'} w={'100%'} justify={'space-between'}>
-        <Flex align={'center'} flexDirection={'row'}>
+        <Flex  align={'center'} flexDirection={'row'}>
           <Profile />
-          <Text fontWeight ='semibold' ml={1} variant="">
+          <Text textAlign={'center'} fontWeight ='semibold' ml={1} variant="">
             bde_ucao
           </Text>
         </Flex>
