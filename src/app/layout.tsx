@@ -13,7 +13,7 @@ export default function RootLayout({
 }: {
   children: React.ReactNode,
   }) {
-  // const { colorMode } = useColorMode();
+
   return (
     <html lang='en' className={fonts.rubik.variable}>
       <body>

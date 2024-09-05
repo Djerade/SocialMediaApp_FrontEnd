@@ -4,7 +4,6 @@ interface Props {}
 
 const Index: NextPage<Props> = ({}) => {
     return <div>
-      
   </div>
 }
 

@@ -9,7 +9,6 @@ import Storie from '@/components/stories';
 import GET_POST from '@/GraphQl/Queries/getPost';
 import Posts from "@/components/posts";
 import Suggestion from "@/components/suggestion";
-import Profile from "@/components/profile";
 import Other from "@/components/other";
 import SectionProfile from "@/components/sectionProfile";
 
@@ -34,10 +33,7 @@ const { data, loading, error } = useQuery(GET_POST, {
       <Flex  justify={'center'}   width={{ base:"100%", sm:"100%", md:"100%", lg:"70%"}} flexDirection={'column'}   align={'center'}>
         <Storie/>
         <Posts/>
-        <Divider />
-        <Posts/>
-        <Divider />
-        <Posts/>
+       
       </Flex>
       <Flex pr={3} pl={3} display={{ base: "none", sm:"none", md:"block"}} w={"30%"}>
         <SectionProfile/>

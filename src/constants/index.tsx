@@ -95,12 +95,75 @@ const listMenu = [
   const posts = [
     {
       "id": 1,
-      "images":"https://i.pinimg.com/564x/47/71/33/47713376bf139b945fbfaaffe4c9dc4d.jpg",
-      "auteur":"bde",
-      "likers":"",
-      "commentaire":"",
+      "profile":{
+        "images":"https://i.pinimg.com/564x/47/71/33/47713376bf139b945fbfaaffe4c9dc4d.jpg",
+        "auteur":"bde",
+      },
+      "likers":[
+        {
+          "id": 1,
+          "name": "Dan Abrahmov",
+          "src": "https://bit.ly/dan-abramov"
+        },
+        {
+          "id": 1,
+          "name": "Dan Abrahmov",
+          "src": "https://bit.ly/dan-abramov"
+        },
+      ],
+      "commentaire":[{
+        "id": 2,
+        "content": "this is a commentaire"
+      }],
+    },
+    {
+      "id": 1,
+      "profile":{
+        "images":"https://i.pinimg.com/564x/47/71/33/47713376bf139b945fbfaaffe4c9dc4d.jpg",
+        "auteur":"bde",
+      },
+      "likers":[
+        {
+          "id": 1,
+          "name": "Dan Abrahmov",
+          "src": "https://bit.ly/dan-abramov"
+        },
+        {
+          "id": 1,
+          "name": "Dan Abrahmov",
+          "src": "https://bit.ly/dan-abramov"
+        },
+      ],
+      "commentaire":[{
+        "id": 2,
+        "content": "this is a commentaire"
+      }],
+    },
+    {
+      "id": 1,
+      "profile":{
+        "images":"https://i.pinimg.com/564x/47/71/33/47713376bf139b945fbfaaffe4c9dc4d.jpg",
+        "auteur":"bde",
+      },
+      "likers":[
+        {
+          "id": 1,
+          "name": "Dan Abrahmov",
+          "src": "https://bit.ly/dan-abramov"
+        },
+        {
+          "id": 1,
+          "name": "Dan Abrahmov",
+          "src": "https://bit.ly/dan-abramov"
+        },
+      ],
+      "commentaire":[{
+        "id": 2,
+        "content": "this is a commentaire"
+      }],
     }
   ]
+
 
   const profile = [
     {
@@ -158,5 +221,6 @@ const listMenu = [
   export {
     listMenu, 
     profile,
-    suggestions
+    suggestions,
+    posts
 };
