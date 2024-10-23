@@ -33,7 +33,6 @@ const { data, loading, error } = useQuery(GET_POST, {
       <Flex  justify={'center'}   width={{ base:"100%", sm:"100%", md:"100%", lg:"70%"}} flexDirection={'column'}   align={'center'}>
         <Storie/>
         <Posts/>
-       
       </Flex>
       <Flex pr={3} pl={3} display={{ base: "none", sm:"none", md:"block"}} w={"30%"}>
         <SectionProfile/>
