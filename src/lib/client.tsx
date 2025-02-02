@@ -6,10 +6,12 @@ import {
   createHttpLink,
 } from '@apollo/client';
 
+const token = typeof window !== "undefined" ? localStorage.getItem("token") : null;
+
 const httpLink = createHttpLink({
   uri: process.env.GRAPHQL_API,
   headers: {
-    Authorization: `Bearer ${localStorage?.getItem('token')}`,
+    Authorization: `Bearer ${token}`,
   },
 });
 
